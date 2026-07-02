@@ -384,107 +384,94 @@ const stepGeneratedCss = String.raw`<style id="visto-step-generated">
 </style>`;
 
 const homeRedesignCss = String.raw`<style id="visto-home-redesign">
-  :root{--green:#12A97E;--green2:#0E8A6B;--deep:#06241d;--ink:#17231f;--soft:#63736d;--line:#e3e8e5;--bg:#f6faf8;--gold:#F2C94C}
+  :root{--green:#12A97E;--green2:#0E8A6B;--deep:#06241d;--ink:#17231f;--soft:#63736d;--line:#e3e8e5;--bg:#f6faf8;--gold:#F2C94C;--cream:#fbfaf5}
   *{box-sizing:border-box}
   body{margin:0;background:#fff;color:var(--ink);font-family:"Plus Jakarta Sans",system-ui,-apple-system,sans-serif}
   a{text-decoration:none;color:inherit}
-  .rd-wrap{max-width:1180px;margin:0 auto;padding:0 22px}
-  .rd-section{padding:70px 0}
-  .rd-k{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.07em;color:var(--green);margin-bottom:10px}
-  .rd-h2{font-size:36px;line-height:1.08;letter-spacing:-.035em;margin:0;color:var(--ink)}
-  .rd-sub{font-size:16px;line-height:1.7;color:var(--soft);max-width:680px;margin:14px 0 0}
-  .rd-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:50px;padding:0 20px;border-radius:10px;background:var(--green);color:#fff;font-weight:900;border:0;box-shadow:0 14px 28px -20px rgba(18,169,126,.8)}
-  .rd-btn:hover{background:var(--green2)}
-  .rd-btn.alt{background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:none}
-  .rd-hero{background:radial-gradient(100% 80% at 86% 0%,#EAF6EF 0%,#fff 54%);padding:44px 0 54px;border-bottom:1px solid var(--line)}
-  .rd-hero-grid{display:grid;grid-template-columns:minmax(0,1.06fr) 430px;gap:48px;align-items:center}
-  .rd-pill{display:inline-flex;align-items:center;gap:8px;background:#EAF6EF;color:#0E6F57;border:1px solid #CDEAE0;border-radius:999px;padding:8px 12px;font-size:12px;font-weight:900;margin-bottom:18px}
-  .rd-hero h1{font-size:58px;line-height:.98;letter-spacing:-.06em;margin:0;max-width:720px}
-  .rd-hero h1 span{color:var(--green)}
-  .rd-lead{font-size:18px;line-height:1.7;color:#40534d;max-width:650px;margin:20px 0 24px}
-  .rd-search{display:grid;grid-template-columns:1fr 1fr auto;gap:8px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:8px;box-shadow:0 22px 48px -34px rgba(6,40,30,.55);max-width:790px}
-  .rd-field{border-right:1px solid #edf1ee;padding:10px 14px}
-  .rd-field:last-of-type{border-right:0}
-  .rd-field span{display:block;color:var(--green);font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px}
-  .rd-field b{font-size:16px}
-  .rd-search .rd-btn{height:54px;white-space:nowrap}
-  .rd-equation{margin-top:15px;color:#6b7c76;font-weight:750;font-size:13px}
-  .rd-equation b{color:var(--ink)}
-  .rd-panel{background:#092a22;color:#fff;border-radius:18px;padding:22px;box-shadow:0 28px 70px -40px rgba(6,40,30,.7)}
-  .rd-side{display:grid;gap:14px}
-  .rd-photo{position:relative;min-height:255px;border-radius:20px;overflow:hidden;background:#dfe9e4;box-shadow:0 22px 52px -34px rgba(6,40,30,.7)}
-  .rd-photo img{width:100%;height:100%;object-fit:cover;display:block}
-  .rd-photo-note{position:absolute;left:16px;right:16px;bottom:16px;background:rgba(6,26,21,.88);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:14px 16px;color:#fff}
-  .rd-photo-note b{display:block;font-size:17px;margin-bottom:3px}
-  .rd-photo-note span{display:block;font-size:12px;color:#c7ddd5;line-height:1.45}
-  .rd-panel-top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;margin-bottom:18px}
-  .rd-panel h3{margin:0;font-size:20px;letter-spacing:-.02em}
-  .rd-panel small{color:#9FCFB6;font-weight:800}
-  .rd-tag{background:rgba(242,201,76,.15);color:#F8DB75;border:1px solid rgba(242,201,76,.34);border-radius:999px;font-size:11px;font-weight:900;padding:7px 10px;white-space:nowrap}
-  .rd-money{background:#fff;color:var(--ink);border-radius:14px;padding:18px;margin-bottom:12px}
-  .rd-money span{display:block;color:#667973;font-size:12px;font-weight:850;margin-bottom:5px}
-  .rd-money strong{font-size:36px;letter-spacing:-.045em;line-height:1}
-  .rd-metrics{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-  .rd-metric{border:1px solid rgba(255,255,255,.13);border-radius:12px;padding:14px;background:rgba(255,255,255,.05)}
-  .rd-metric b{font-size:21px;display:block;color:#fff}
-  .rd-metric span{font-size:12px;color:#a8c1ba}
-  .rd-note{font-size:12px;color:#a8c1ba;line-height:1.55;margin-top:14px}
-  .rd-strip{background:#08271f;color:#d7e9e2;padding:22px 0}
-  .rd-strip-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-  .rd-strip-item{border-left:1px solid rgba(255,255,255,.16);padding-left:16px}
-  .rd-strip-item b{display:block;color:#fff;font-size:20px;letter-spacing:-.02em}
-  .rd-strip-item span{font-size:12px;color:#a8c1ba;font-weight:750}
-  .rd-city{background:var(--bg)}
-  .rd-head-row{display:flex;justify-content:space-between;gap:28px;align-items:end;margin-bottom:26px}
-  .rd-table{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 18px 42px -34px rgba(6,40,30,.5)}
-  .rd-row{display:grid;grid-template-columns:1.1fr .9fr .8fr 1fr .9fr;gap:0;border-bottom:1px solid var(--line)}
-  .rd-row:last-child{border-bottom:0}
-  .rd-cell{padding:17px 18px;border-right:1px solid #eef2f0;font-size:14px;color:#40534d}
-  .rd-cell:last-child{border-right:0}
-  .rd-row.head .rd-cell{font-size:11px;text-transform:uppercase;letter-spacing:.06em;font-weight:900;color:#7a8e87;background:#fbfdfc}
-  .rd-cell b{display:block;color:var(--ink);font-size:16px}
-  .rd-opp{display:inline-flex;align-items:center;border-radius:999px;padding:6px 10px;background:#EAF6EF;color:#0E6F57;font-size:12px;font-weight:900}
-  .rd-services{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:30px}
-  .rd-service{border:1px solid var(--line);border-radius:14px;padding:20px;background:#fff}
-  .rd-service .num{font-size:12px;font-weight:900;color:var(--green);margin-bottom:12px}
-  .rd-service h3{margin:0 0 8px;font-size:18px;letter-spacing:-.015em}
-  .rd-service p{margin:0;color:var(--soft);line-height:1.6;font-size:14px}
-  .rd-method{background:#fff}
-  .rd-method-grid{display:grid;grid-template-columns:340px 1fr;gap:36px;align-items:start}
-  .rd-method-aside{position:sticky;top:94px;background:#0a2b23;color:#fff;border-radius:18px;padding:24px}
-  .rd-method-aside h2{font-size:32px;line-height:1.08;letter-spacing:-.04em;margin:0 0 14px}
-  .rd-method-aside p{color:#b9d3ca;line-height:1.65;margin:0 0 20px}
-  .rd-steps{display:grid;gap:14px}
-  .rd-step{display:grid;grid-template-columns:74px 1fr 150px;gap:18px;align-items:center;border:1px solid var(--line);border-radius:14px;background:#fff;padding:18px}
-  .rd-step-n{width:54px;height:54px;border-radius:14px;background:#EAF6EF;color:var(--green);display:grid;place-items:center;font-size:18px;font-weight:950}
-  .rd-step-img{width:74px;height:64px;border-radius:12px;background:#e8f1ed center/cover no-repeat;box-shadow:inset 0 0 0 1px rgba(0,0,0,.04)}
-  .rd-step h3{margin:0 0 6px;font-size:19px;letter-spacing:-.02em}
-  .rd-step p{margin:0;color:var(--soft);line-height:1.55;font-size:14px}
-  .rd-step-m{font-size:12px;font-weight:900;color:#0E6F57;background:#EAF6EF;border-radius:999px;padding:8px 10px;text-align:center}
-  .rd-month{background:#f9fbfa;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .rd-month-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:28px}
-  .rd-month-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px}
-  .rd-month-card b{display:block;font-size:17px;margin-bottom:8px}
-  .rd-month-card p{margin:0;color:var(--soft);line-height:1.6;font-size:14px}
-  .rd-proof{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch}
-  .rd-proof-card{border-radius:18px;padding:28px;border:1px solid var(--line)}
-  .rd-proof-card.dark{background:#092a22;color:#fff;border-color:#092a22}
-  .rd-proof-card.photo{padding:0;overflow:hidden;background:#fff}
-  .rd-proof-card.photo img{width:100%;height:230px;object-fit:cover;display:block}
-  .rd-proof-pad{padding:24px 26px}
-  .rd-proof-card h2{font-size:30px;line-height:1.1;letter-spacing:-.035em;margin:0 0 14px}
-  .rd-proof-card p{line-height:1.7;color:#52665f;margin:0}
-  .rd-proof-card.dark p{color:#b9d3ca}
-  .rd-list{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:10px}
-  .rd-list li{display:flex;gap:10px;color:#d7e9e2;font-weight:750;font-size:14px}
-  .rd-list li:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold);margin-top:7px;flex:none}
-  .rd-final{background:radial-gradient(120% 130% at 80% -20%,#145043 0%,#0E2E2A 44%,#071d18 100%);color:#fff;text-align:center;padding:70px 0}
-  .rd-final h2{font-size:42px;line-height:1.05;letter-spacing:-.045em;margin:0 auto 16px;max-width:760px}
-  .rd-final p{color:#b9d3ca;line-height:1.7;margin:0 auto 24px;max-width:620px}
-  .rd-final .rd-btn.alt{border-color:rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#fff}
-  .rd-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-  @media(max-width:980px){.rd-hero-grid,.rd-method-grid,.rd-proof{grid-template-columns:1fr}.rd-side{max-width:560px}.rd-panel{max-width:560px}.rd-method-aside{position:static}.rd-row{grid-template-columns:1fr 1fr}.rd-row.head{display:none}.rd-cell{border-bottom:1px solid #eef2f0}.rd-services,.rd-month-grid,.rd-strip-grid{grid-template-columns:1fr 1fr}.rd-step{grid-template-columns:74px 1fr}}
-  @media(max-width:640px){.rd-section{padding:48px 0}.rd-hero h1{font-size:39px}.rd-h2{font-size:29px}.rd-search{grid-template-columns:1fr}.rd-field{border-right:0;border-bottom:1px solid #edf1ee}.rd-strip-grid,.rd-services,.rd-month-grid{grid-template-columns:1fr}.rd-metrics{grid-template-columns:1fr}.rd-step{grid-template-columns:1fr}.rd-step-img{width:100%;height:150px}.rd-step-m{text-align:left}.rd-head-row{display:block}.rd-final h2{font-size:32px}}
+  .py-wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+  .py-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 20px;border-radius:8px;background:var(--green);color:#fff;font-weight:900;border:1px solid var(--green);box-shadow:0 16px 30px -24px rgba(18,169,126,.9)}
+  .py-btn:hover{background:var(--green2);border-color:var(--green2)}
+  .py-btn.alt{background:#fff;color:var(--ink);border-color:var(--line);box-shadow:none}
+  .py-k{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.07em;color:var(--green);margin-bottom:10px}
+  .py-h2{font-size:38px;line-height:1.08;margin:0;letter-spacing:0;color:var(--ink);max-width:780px}
+  .py-sub{font-size:16px;line-height:1.7;color:var(--soft);max-width:690px;margin:14px 0 0}
+  .py-section{padding:72px 0}
+  .py-hero{position:relative;min-height:650px;color:#fff;background:center/cover no-repeat;display:flex;align-items:flex-end;overflow:hidden}
+  .py-hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,23,18,.91) 0%,rgba(5,30,24,.72) 43%,rgba(5,30,24,.2) 78%),linear-gradient(0deg,rgba(4,23,18,.86) 0%,rgba(4,23,18,0) 34%)}
+  .py-hero-inner{position:relative;width:100%;padding:84px 0 30px}
+  .py-hero-copy{max-width:760px;padding-bottom:34px}
+  .py-eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(255,255,255,.24);background:rgba(255,255,255,.09);border-radius:999px;padding:9px 13px;font-size:12px;font-weight:900;margin-bottom:18px}
+  .py-eyebrow:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold)}
+  .py-hero h1{font-size:66px;line-height:.96;letter-spacing:0;margin:0;max-width:820px}
+  .py-hero h1 span{color:#8FE2C7}
+  .py-hero p{font-size:19px;line-height:1.65;color:#d9eee8;max-width:650px;margin:22px 0 26px}
+  .py-actions{display:flex;gap:10px;flex-wrap:wrap}
+  .py-hero .py-btn.alt{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.28);color:#fff}
+  .py-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid rgba(255,255,255,.18);background:rgba(5,30,24,.82);backdrop-filter:blur(12px);border-radius:10px;overflow:hidden}
+  .py-fact{padding:19px 20px;border-right:1px solid rgba(255,255,255,.14)}
+  .py-fact:last-child{border-right:0}
+  .py-fact b{display:block;font-size:22px;line-height:1;color:#fff}
+  .py-fact span{display:block;margin-top:7px;font-size:12px;font-weight:800;color:#aac9bf}
+  .py-intro{background:var(--cream);border-bottom:1px solid var(--line)}
+  .py-intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}
+  .py-intro-text{max-width:560px}
+  .py-intro-list{display:grid;gap:12px}
+  .py-intro-row{display:grid;grid-template-columns:42px 1fr;gap:14px;align-items:start;background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px}
+  .py-intro-row b:first-child{width:42px;height:42px;border-radius:8px;background:#EAF6EF;color:var(--green);display:grid;place-items:center;font-size:15px}
+  .py-intro-row strong{display:block;font-size:17px;margin:0 0 4px}
+  .py-intro-row span{display:block;color:var(--soft);font-size:14px;line-height:1.55}
+  .py-work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+  .py-work-card{border:1px solid var(--line);border-radius:8px;background:#fff;overflow:hidden}
+  .py-work-card img{width:100%;height:210px;object-fit:cover;display:block;background:#e8f1ed}
+  .py-work-body{padding:20px}
+  .py-work-body small{display:block;color:var(--green);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.05em;margin-bottom:9px}
+  .py-work-body h3{margin:0 0 8px;font-size:21px;letter-spacing:0}
+  .py-work-body p{margin:0;color:var(--soft);font-size:14px;line-height:1.65}
+  .py-example{background:#0a2b23;color:#fff}
+  .py-example .py-k{color:#9FCFB6}
+  .py-example .py-h2{color:#fff}
+  .py-example .py-sub{color:#b9d3ca}
+  .py-example-grid{display:grid;grid-template-columns:1fr 440px;gap:34px;align-items:stretch;margin-top:30px}
+  .py-ticket{background:#fff;color:var(--ink);border-radius:8px;padding:8px;border:1px solid rgba(255,255,255,.1);box-shadow:0 26px 70px -46px rgba(0,0,0,.7)}
+  .py-ticket-head{padding:18px 18px 14px;border-bottom:1px solid var(--line)}
+  .py-ticket-head b{display:block;font-size:22px;letter-spacing:0}
+  .py-ticket-head span{display:block;color:var(--soft);font-size:13px;margin-top:4px}
+  .py-ticket-row{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;padding:15px 18px;border-bottom:1px solid #eef2f0}
+  .py-ticket-row:last-child{border-bottom:0}
+  .py-ticket-row b{font-size:15px}
+  .py-ticket-row small{display:block;color:var(--soft);margin-top:3px}
+  .py-ticket-row strong{font-size:20px;color:var(--green);white-space:nowrap}
+  .py-map-photo{position:relative;min-height:100%;border-radius:8px;overflow:hidden;background:#dfe9e4}
+  .py-map-photo img{width:100%;height:100%;min-height:360px;object-fit:cover;display:block}
+  .py-map-note{position:absolute;left:18px;right:18px;bottom:18px;border-radius:8px;background:rgba(6,29,23,.9);border:1px solid rgba(255,255,255,.16);padding:16px;color:#fff}
+  .py-map-note b{display:block;font-size:18px;margin-bottom:5px}
+  .py-map-note span{color:#c7ddd5;font-size:13px;line-height:1.5}
+  .py-method{background:#fff}
+  .py-method-head{display:flex;justify-content:space-between;gap:28px;align-items:end;margin-bottom:30px}
+  .py-timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+  .py-week{padding:22px;border-right:1px solid var(--line);background:#fff;min-height:230px}
+  .py-week:last-child{border-right:0}
+  .py-week-n{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#EAF6EF;color:var(--green);font-weight:950;margin-bottom:18px}
+  .py-week h3{font-size:19px;line-height:1.2;margin:0 0 10px;letter-spacing:0}
+  .py-week p{margin:0;color:var(--soft);line-height:1.6;font-size:14px}
+  .py-proof{background:#f8fbf9;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .py-proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .py-proof-card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:26px}
+  .py-proof-card.dark{background:#0a2b23;color:#fff;border-color:#0a2b23}
+  .py-proof-card h3{font-size:28px;line-height:1.12;margin:0 0 18px;letter-spacing:0}
+  .py-proof-list{list-style:none;padding:0;margin:0;display:grid;gap:13px}
+  .py-proof-list li{display:flex;gap:10px;color:#536861;font-weight:750;line-height:1.45}
+  .py-proof-card.dark .py-proof-list li{color:#d7e9e2}
+  .py-proof-list li:before{content:"";width:9px;height:9px;border-radius:50%;background:var(--green);margin-top:7px;flex:none}
+  .py-proof-card.dark .py-proof-list li:before{background:var(--gold)}
+  .py-final{position:relative;color:#fff;background:center/cover no-repeat;overflow:hidden}
+  .py-final:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,25,20,.92),rgba(5,25,20,.65))}
+  .py-final .py-wrap{position:relative;padding-top:74px;padding-bottom:74px}
+  .py-final h2{font-size:44px;line-height:1.05;margin:0 0 16px;letter-spacing:0;max-width:760px}
+  .py-final p{color:#d5ebe4;line-height:1.7;max-width:620px;margin:0 0 24px}
+  .py-final .py-btn.alt{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.25);color:#fff}
+  @media(max-width:980px){.py-hero{min-height:620px}.py-hero h1{font-size:52px}.py-facts,.py-work-grid,.py-timeline{grid-template-columns:1fr 1fr}.py-fact:nth-child(2){border-right:0}.py-fact:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.14)}.py-intro-grid,.py-example-grid,.py-proof-grid{grid-template-columns:1fr}.py-map-photo img{height:390px}.py-method-head{display:block}.py-method-head .py-btn{margin-top:18px}.py-week:nth-child(2){border-right:0}.py-week:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+  @media(max-width:640px){.py-section{padding:52px 0}.py-hero{min-height:620px}.py-hero-inner{padding:70px 0 22px}.py-hero h1{font-size:40px}.py-hero p{font-size:16px}.py-h2{font-size:30px}.py-actions{display:grid}.py-btn{width:100%}.py-facts,.py-work-grid,.py-timeline{grid-template-columns:1fr}.py-fact,.py-fact:nth-child(2){border-right:0;border-bottom:1px solid rgba(255,255,255,.14)}.py-fact:last-child{border-bottom:0}.py-week,.py-week:nth-child(2){border-right:0;border-bottom:1px solid var(--line)}.py-week:last-child{border-bottom:0}.py-ticket-row{grid-template-columns:1fr}.py-ticket-row strong{white-space:normal}.py-final h2{font-size:32px}}
 </style>`;
 
 const actionMeta = {
@@ -1027,145 +1014,135 @@ ${commonShellCss}
 ${commonHeader}
 
 <main>
-  <section class="rd-hero" id="calculadora">
-    <div class="rd-wrap rd-hero-grid">
-      <div>
-        <div class="rd-pill">Facturaci&oacute;n local, no SEO a ciegas</div>
-        <h1>Google ya est&aacute; mandando trabajos en tu ciudad. <span>Mira cu&aacute;nto hay en juego.</span></h1>
-        <p class="rd-lead">Primero ponemos n&uacute;meros: qu&eacute; busca la gente, qu&eacute; vale cada servicio y qu&eacute; se est&aacute; llevando el Top 3 del mapa. Luego decidimos qu&eacute; tocar para que entren m&aacute;s llamadas buenas.</p>
-        <div class="rd-search" aria-label="Calculadora de facturaci&oacute;n local">
-          <div class="rd-field"><span>Oficio</span><b>Fontaneros</b></div>
-          <div class="rd-field"><span>Ciudad</span><b>Madrid</b></div>
-          <a class="rd-btn" href="sector.html">Calcular facturaci&oacute;n local</a>
-        </div>
-        <div class="rd-equation"><b>b&uacute;squedas/mes</b> x <b>ticket medio</b> x <b>cuota capturable</b> = facturaci&oacute;n local estimada</div>
-      </div>
-
-      <div class="rd-side">
-        <div class="rd-photo">
-          <img src="${heroImage}" alt="Negocio local atendiendo a clientes">
-          <div class="rd-photo-note"><b>No va de visitas. Va de trabajos.</b><span>El informe empieza por ciudad, servicio y ticket. Si no hay dinero claro, no se prioriza.</span></div>
-        </div>
-        <aside class="rd-panel" aria-label="Ejemplo de mercado local">
-          <div class="rd-panel-top">
-            <div><small>Ejemplo de diagn&oacute;stico</small><h3>Fontaneros en Madrid</h3></div>
-            <span class="rd-tag">Top 3 Maps</span>
+  <section class="py-hero" id="calculadora" style="background-image:url(${heroImage})">
+    <div class="py-hero-inner">
+      <div class="py-wrap">
+        <div class="py-hero-copy">
+          <div class="py-eyebrow">Para negocios locales que necesitan llamadas</div>
+          <h1>Que te encuentren en Google Maps. <span>Que te llamen.</span></h1>
+          <p>Antes de hablar de SEO miramos algo m&aacute;s simple: cu&aacute;nta gente busca tu servicio en tu ciudad, cu&aacute;nto dinero mueve y qu&eacute; tendr&iacute;a que cambiar para que te elijan a ti.</p>
+          <div class="py-actions">
+            <a class="py-btn" href="#facturacion-ciudad">Ver ejemplo por ciudad</a>
+            <a class="py-btn alt" href="#metodo">C&oacute;mo trabajamos</a>
           </div>
-          <div class="rd-money"><span>Mercado mensual estimado</span><strong>3,1M &euro;</strong></div>
-          <div class="rd-metrics">
-            <div class="rd-metric"><b>42.000</b><span>b&uacute;squedas/mes</span></div>
-            <div class="rd-metric"><b>160 &euro;</b><span>ticket medio base</span></div>
-            <div class="rd-metric"><b>68%</b><span>clics en Top 3</span></div>
-            <div class="rd-metric"><b>90 d&iacute;as</b><span>primer ciclo serio</span></div>
-          </div>
-          <p class="rd-note">No es una promesa de facturaci&oacute;n. Es una forma de ver d&oacute;nde merece la pena pelear.</p>
-        </aside>
+        </div>
+        <div class="py-facts" aria-label="Resumen de la propuesta">
+          <div class="py-fact"><b>Ciudad</b><span>empezamos por tu zona real</span></div>
+          <div class="py-fact"><b>Servicios</b><span>separamos volumen y margen</span></div>
+          <div class="py-fact"><b>Llamadas</b><span>medimos lo que entra</span></div>
+          <div class="py-fact"><b>90 d&iacute;as</b><span>primer ciclo de trabajo</span></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="rd-strip">
-    <div class="rd-wrap rd-strip-grid">
-      <div class="rd-strip-item"><b>Ciudad primero</b><span>La oportunidad cambia por zona.</span></div>
-      <div class="rd-strip-item"><b>Ticket real</b><span>No todos los servicios valen igual.</span></div>
-      <div class="rd-strip-item"><b>Top 3</b><span>Ah&iacute; se concentra la demanda.</span></div>
-      <div class="rd-strip-item"><b>Llamadas</b><span>La m&eacute;trica que importa.</span></div>
+  <section class="py-section py-intro">
+    <div class="py-wrap py-intro-grid">
+      <div class="py-intro-text">
+        <div class="py-k">La idea en una frase</div>
+        <h2 class="py-h2">No vendemos visitas. Buscamos llamadas que puedan acabar en caja.</h2>
+        <p class="py-sub">Un due&ntilde;o de pyme no necesita un informe enorme. Necesita saber si en su ciudad hay demanda, qu&eacute; servicio deja dinero y qu&eacute; hay que ordenar para parecer la mejor opci&oacute;n cuando alguien busca.</p>
+      </div>
+      <div class="py-intro-list">
+        <div class="py-intro-row"><b>1</b><div><strong>Miramos la ciudad</strong><span>Cu&aacute;ntas personas buscan, qu&eacute; barrios o zonas pesan m&aacute;s y qui&eacute;n aparece arriba.</span></div></div>
+        <div class="py-intro-row"><b>2</b><div><strong>Lo traducimos a euros</strong><span>No vale igual una urgencia, una instalaci&oacute;n o una reforma. Priorizamos por margen.</span></div></div>
+        <div class="py-intro-row"><b>3</b><div><strong>Arreglamos lo visible</strong><span>Ficha, web, fotos, rese&ntilde;as y botones de llamada. Lo que ve el cliente antes de elegir.</span></div></div>
+      </div>
     </div>
   </section>
 
-  <section class="rd-section rd-city" id="facturacion-ciudad">
-    <div class="rd-wrap">
-      <div class="rd-head-row">
+  <section class="py-section">
+    <div class="py-wrap">
+      <div class="py-k">Lo que recibe un negocio</div>
+      <h2 class="py-h2">Tres piezas que un empresario entiende a la primera.</h2>
+      <p class="py-sub">Nada de decorar el SEO. Primero claridad, luego ejecuci&oacute;n, y despu&eacute;s medici&oacute;n.</p>
+      <div class="py-work-grid">
+        <article class="py-work-card">
+          <img src="${mapImage}" alt="B&uacute;squeda de negocios locales en Google Maps">
+          <div class="py-work-body"><small>Mapa local</small><h3>D&oacute;nde est&aacute; el dinero</h3><p>Oficio, ciudad, b&uacute;squedas, competencia y servicios con m&aacute;s sentido comercial.</p></div>
+        </article>
+        <article class="py-work-card">
+          <img src="${methodImage2}" alt="Profesional local hablando con un cliente">
+          <div class="py-work-body"><small>Ficha y web</small><h3>Por qu&eacute; te elegir&iacute;an</h3><p>Categor&iacute;as, servicios, fotos reales, horarios, mensajes y una web que ayuda a llamar.</p></div>
+        </article>
+        <article class="py-work-card">
+          <img src="${methodImage3}" alt="Cliente revisando rese&ntilde;as en el tel&eacute;fono">
+          <div class="py-work-body"><small>Confianza</small><h3>Lo que reduce la duda</h3><p>Rese&ntilde;as recientes, respuestas cuidadas, pruebas de trabajos y contacto sin fricci&oacute;n.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-section py-example" id="facturacion-ciudad">
+    <div class="py-wrap">
+      <div class="py-k">Ejemplo en cristiano</div>
+      <h2 class="py-h2">Si fueras fontanero en Madrid, esto es lo que mirar&iacute;amos primero.</h2>
+      <p class="py-sub">No es una promesa de facturaci&oacute;n. Es una forma honesta de decidir si merece la pena invertir y por d&oacute;nde empezar.</p>
+      <div class="py-example-grid">
+        <div class="py-ticket">
+          <div class="py-ticket-head"><b>Fontaneros en Madrid</b><span>Lectura inicial antes de tocar nada</span></div>
+          <div class="py-ticket-row"><div><b>Servicio m&aacute;s buscado</b><small>Urgencias, fugas y desatascos</small></div><strong>42.000/mes</strong></div>
+          <div class="py-ticket-row"><div><b>Servicio con mejor ticket</b><small>Reformas, instalaciones y trabajos planificados</small></div><strong>3.500 &euro;</strong></div>
+          <div class="py-ticket-row"><div><b>Problema visible</b><small>Fotos pobres, rese&ntilde;as antiguas y llamada poco clara</small></div><strong>Arreglable</strong></div>
+          <div class="py-ticket-row"><div><b>Primer mes</b><small>Ficha, servicios, fotos, rese&ntilde;as y botones de contacto</small></div><strong>Prioridad 1</strong></div>
+        </div>
+        <div class="py-map-photo">
+          <img src="${mapImage}" alt="Persona buscando negocios locales en el m&oacute;vil">
+          <div class="py-map-note"><b>La decisi&oacute;n pasa en el m&oacute;vil.</b><span>El cliente compara tres cosas: qui&eacute;n sale, qui&eacute;n parece fiable y a qui&eacute;n puede llamar ahora.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-section py-method" id="metodo">
+    <div class="py-wrap">
+      <div class="py-method-head">
         <div>
-          <div class="rd-k">Facturaci&oacute;n por ciudad</div>
-          <h2 class="rd-h2">La misma b&uacute;squeda no vale igual en Madrid, Valencia o Sevilla.</h2>
-          <p class="rd-sub">Antes de tocar una ficha, decidimos d&oacute;nde est&aacute; la oportunidad: ciudad, servicio, ticket y competencia. As&iacute; se prioriza el trabajo.</p>
+          <div class="py-k">M&eacute;todo de trabajo</div>
+          <h2 class="py-h2">Cuatro semanas para poner orden y saber qu&eacute; est&aacute; pasando.</h2>
+          <p class="py-sub">Despu&eacute;s se repite cada mes con datos, no con ocurrencias.</p>
         </div>
-        <a class="rd-btn alt" href="sectores.html">Ver sectores</a>
+        <a class="py-btn alt" href="metodo.html">Ver m&eacute;todo completo</a>
       </div>
-      <div class="rd-table" role="table" aria-label="Facturaci&oacute;n por ciudad">
-        <div class="rd-row head"><div class="rd-cell">Ciudad</div><div class="rd-cell">B&uacute;squedas</div><div class="rd-cell">Ticket</div><div class="rd-cell">Mercado mensual</div><div class="rd-cell">Oportunidad</div></div>
-        <div class="rd-row"><div class="rd-cell"><b>Madrid</b>Alta demanda y mucha competencia</div><div class="rd-cell"><b>42.000</b>mes</div><div class="rd-cell"><b>160 &euro;</b>base</div><div class="rd-cell"><b>3,1M &euro;</b>estimado</div><div class="rd-cell"><span class="rd-opp">Alta</span></div></div>
-        <div class="rd-row"><div class="rd-cell"><b>Barcelona</b>Mercado grande, muy repartido</div><div class="rd-cell"><b>31.000</b>mes</div><div class="rd-cell"><b>155 &euro;</b>base</div><div class="rd-cell"><b>2,2M &euro;</b>estimado</div><div class="rd-cell"><span class="rd-opp">Alta</span></div></div>
-        <div class="rd-row"><div class="rd-cell"><b>Valencia</b>Buen volumen y pelea abordable</div><div class="rd-cell"><b>13.000</b>mes</div><div class="rd-cell"><b>140 &euro;</b>base</div><div class="rd-cell"><b>840K &euro;</b>estimado</div><div class="rd-cell"><span class="rd-opp">Media alta</span></div></div>
-        <div class="rd-row"><div class="rd-cell"><b>Sevilla</b>Menos volumen, buena intenci&oacute;n</div><div class="rd-cell"><b>9.800</b>mes</div><div class="rd-cell"><b>135 &euro;</b>base</div><div class="rd-cell"><b>610K &euro;</b>estimado</div><div class="rd-cell"><span class="rd-opp">Media</span></div></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="rd-section">
-    <div class="rd-wrap">
-      <div class="rd-k">De mercado a llamadas</div>
-      <h2 class="rd-h2">No se trabaja todo a la vez. Se empieza por lo que puede acabar en caja.</h2>
-      <p class="rd-sub">Un negocio local no necesita m&aacute;s tr&aacute;fico por deporte. Necesita aparecer cuando alguien busca un servicio que paga facturas.</p>
-      <div class="rd-services">
-        <article class="rd-service"><div class="num">01</div><h3>Servicios con ticket</h3><p>Separamos lo que trae volumen de lo que deja margen. No se trabaja igual una urgencia que una reforma.</p></article>
-        <article class="rd-service"><div class="num">02</div><h3>Ciudades que compensan</h3><p>Ordenamos zonas por demanda, competencia y capacidad real de atenderlas. Atacar todo suele diluir el esfuerzo.</p></article>
-        <article class="rd-service"><div class="num">03</div><h3>Se&ntilde;ales que dan llamadas</h3><p>Ficha, web, rese&ntilde;as y contenido local apuntan al mismo sitio: que el cliente te elija y llame.</p></article>
+      <div class="py-timeline">
+        <article class="py-week"><span class="py-week-n">1</span><h3>Medimos ciudad y competencia</h3><p>Buscamos demanda real, servicios rentables y rivales que hoy se llevan las llamadas.</p></article>
+        <article class="py-week"><span class="py-week-n">2</span><h3>Ordenamos ficha y servicios</h3><p>Google entiende qu&eacute; haces, d&oacute;nde trabajas y qu&eacute; debe mostrar cuando te buscan.</p></article>
+        <article class="py-week"><span class="py-week-n">3</span><h3>A&ntilde;adimos prueba real</h3><p>Fotos, rese&ntilde;as, respuestas, web m&oacute;vil y se&ntilde;ales que hacen confiar.</p></article>
+        <article class="py-week"><span class="py-week-n">4</span><h3>Medimos llamadas y decidimos</h3><p>Vemos qu&eacute; entr&oacute;, qu&eacute; servicio funcion&oacute; y qu&eacute; toca atacar despu&eacute;s.</p></article>
       </div>
     </div>
   </section>
 
-  <section class="rd-section rd-method" id="metodo">
-    <div class="rd-wrap rd-method-grid">
-      <aside class="rd-method-aside">
-        <div class="rd-k" style="color:#9FCFB6">M&eacute;todo Visto</div>
-        <h2>4 acciones para convertir b&uacute;squedas en facturaci&oacute;n.</h2>
-        <p>El m&eacute;todo no vive en una diapositiva. Vive en tareas mensuales sobre tu ficha, tu web, tus rese&ntilde;as y tus llamadas.</p>
-        <a class="rd-btn" href="metodo.html">Ver m&eacute;todo completo</a>
-      </aside>
-      <div class="rd-steps">
-        <article class="rd-step"><div class="rd-step-img" style="background-image:url(${mapImage})"></div><div><h3>Identidad</h3><p>Google entiende qui&eacute;n eres, qu&eacute; haces y en qu&eacute; zonas trabajas.</p></div><div class="rd-step-m">Mueve visibilidad</div></article>
-        <article class="rd-step"><div class="rd-step-img" style="background-image:url(${methodImage2})"></div><div><h3>Atractivo</h3><p>El cliente ve servicios, fotos, precios orientativos y motivos para elegirte.</p></div><div class="rd-step-m">Mueve elecci&oacute;n</div></article>
-        <article class="rd-step"><div class="rd-step-img" style="background-image:url(${methodImage3})"></div><div><h3>Confianza</h3><p>Rese&ntilde;as, respuestas y prueba real reducen la duda antes de llamar.</p></div><div class="rd-step-m">Mueve conversi&oacute;n</div></article>
-        <article class="rd-step"><div class="rd-step-img" style="background-image:url(${methodImage4})"></div><div><h3>Llamadas</h3><p>Botones, WhatsApp, rutas y medici&oacute;n convierten presencia en contactos.</p></div><div class="rd-step-m">Mueve facturaci&oacute;n</div></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="rd-section rd-month">
-    <div class="rd-wrap">
-      <div class="rd-k">Trabajo mensual</div>
-      <h2 class="rd-h2">Qu&eacute; ves cada mes, sin humo.</h2>
-      <p class="rd-sub">El cliente no deber&iacute;a tener que adivinar qu&eacute; se ha hecho. Cada mes tiene acciones, datos y decisiones.</p>
-      <div class="rd-month-grid">
-        <article class="rd-month-card"><b>Acciones realizadas</b><p>Cambios concretos en ficha, web, servicios, fotos, rese&ntilde;as, contenido y medici&oacute;n.</p></article>
-        <article class="rd-month-card"><b>Llamadas y zonas</b><p>Qu&eacute; ha entrado, desde d&oacute;nde, por qu&eacute; servicio y qu&eacute; parte merece m&aacute;s trabajo.</p></article>
-        <article class="rd-month-card"><b>Siguiente apuesta</b><p>La prioridad del mes siguiente sale de datos: ciudad, servicio, margen y competencia.</p></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="rd-section">
-    <div class="rd-wrap rd-proof">
-      <article class="rd-proof-card photo">
-        <img src="${mapImage}" alt="Cliente buscando negocios locales en Google Maps">
-        <div class="rd-proof-pad">
-        <div class="rd-k">Por qu&eacute; cambia</div>
-        <h2>El mapa no es un escaparate. Es una cola de clientes.</h2>
-        <p>Si sabes cu&aacute;nto se busca, cu&aacute;nto vale un cliente y qu&eacute; parte se queda el mapa, las decisiones son m&aacute;s simples. No se trata de publicar por publicar. Se trata de ganar las b&uacute;squedas que pueden acabar en caja.</p>
-        </div>
+  <section class="py-section py-proof">
+    <div class="py-wrap py-proof-grid">
+      <article class="py-proof-card">
+        <h3>Lo que s&iacute; hacemos</h3>
+        <ul class="py-proof-list">
+          <li>Trabajar con datos por ciudad y por servicio.</li>
+          <li>Priorizar llamadas y trabajos con margen.</li>
+          <li>Mejorar ficha, web, fotos, rese&ntilde;as y contacto.</li>
+          <li>Explicar cada mes qu&eacute; se hizo y qu&eacute; toca ahora.</li>
+        </ul>
       </article>
-      <article class="rd-proof-card dark">
-        <div class="rd-k" style="color:#9FCFB6">Lo que evitamos</div>
-        <h2>Menos promesas grandes. M&aacute;s trabajo visible.</h2>
-        <ul class="rd-list">
-          <li>No vendemos posiciones sin mirar la ciudad.</li>
-          <li>No mezclamos servicios baratos con servicios rentables.</li>
-          <li>No mandamos informes que no hablan de llamadas.</li>
-          <li>No cambiamos de estrategia cada semana.</li>
+      <article class="py-proof-card dark">
+        <h3>Lo que no vendemos</h3>
+        <ul class="py-proof-list">
+          <li>Prometer el primer puesto en dos semanas.</li>
+          <li>Informes bonitos que no hablan de llamadas.</li>
+          <li>Textos para rellenar p&aacute;ginas sin criterio comercial.</li>
+          <li>Tratar igual un trabajo barato que uno rentable.</li>
         </ul>
       </article>
     </div>
   </section>
 
-  <section class="rd-final">
-    <div class="rd-wrap">
-      <h2>Empieza por saber cu&aacute;nto dinero se mueve en tu ciudad.</h2>
-      <p>Con esa cifra delante, el SEO deja de sonar abstracto. Ya puedes decidir qu&eacute; ciudad, qu&eacute; servicio y qu&eacute; llamada merece pelear primero.</p>
-      <div class="rd-actions">
-        <a class="rd-btn" href="#calculadora">Calcular facturaci&oacute;n local</a>
-        <a class="rd-btn alt" href="metodo.html">Ver metodolog&iacute;a</a>
+  <section class="py-final" style="background-image:url(${methodImage4})">
+    <div class="py-wrap">
+      <h2>Empecemos por tu ciudad. Luego hablamos de SEO.</h2>
+      <p>Si vemos demanda, ticket y margen, te ense&ntilde;amos d&oacute;nde est&aacute; la oportunidad y qu&eacute; har&iacute;amos durante los primeros 90 d&iacute;as. Si no lo vemos claro, tambi&eacute;n te lo decimos.</p>
+      <div class="py-actions">
+        <a class="py-btn" href="#calculadora">Ver mi ciudad</a>
+        <a class="py-btn alt" href="metodo.html">Ver c&oacute;mo trabajamos</a>
       </div>
     </div>
   </section>
@@ -1553,7 +1530,14 @@ function assertBuiltPageLinks() {
   }
 }
 
-fs.rmSync(outDir, { recursive: true, force: true });
+function resetOutDir(dir) {
+  fs.mkdirSync(dir, { recursive: true });
+  for (const entry of fs.readdirSync(dir)) {
+    fs.rmSync(path.join(dir, entry), { recursive: true, force: true });
+  }
+}
+
+resetOutDir(outDir);
 fs.mkdirSync(outDir, { recursive: true });
 
 for (const { srcPath, dest } of pages) {
