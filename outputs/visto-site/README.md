@@ -1,6 +1,6 @@
 # Visto
 
-Sitio estatico con las 119 paginas construidas.
+Sitio estatico con las 120 paginas construidas.
 
 - home.html
 - sectores.html
@@ -12,6 +12,7 @@ Sitio estatico con las 119 paginas construidas.
 - metodo-fase2.html
 - metodo-fase3.html
 - metodo-fase4.html
+- home-redesign.html
 - 61 paginas de sector desde sectores-contenido.yaml
 - 48 paginas de paso del metodo
 

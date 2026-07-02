@@ -25,8 +25,9 @@ const pages = [
 ];
 
 const generatedMethodPages = ["metodo-fase2.html", "metodo-fase3.html", "metodo-fase4.html"];
+const generatedRedesignPages = ["home-redesign.html"];
 const staticAliasPages = ["index.html"];
-let builtPageNames = [...pages.map((page) => page.dest), ...generatedMethodPages, ...staticAliasPages];
+let builtPageNames = [...pages.map((page) => page.dest), ...generatedMethodPages, ...generatedRedesignPages, ...staticAliasPages];
 let builtPages = new Set(builtPageNames);
 const fontHref =
   "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap";
@@ -380,6 +381,100 @@ const stepGeneratedCss = String.raw`<style id="visto-step-generated">
   .pn-dir{font-size:12px;font-weight:800;color:#12A97E}.pn-t{font-size:14px;font-weight:850;color:var(--ink)}
   @media(max-width:1180px){.step-shell{flex-direction:column}.step-card{position:static;order:-1;margin:0 auto 28px;width:auto;max-width:760px}.step-content{padding-top:24px}}
   @media(max-width:760px){.step-hero .inner,.step-content,.step-card{max-width:100%}.step-hero h1{font-size:26px}.learn,.compare3{grid-template-columns:1fr}.pasonav{grid-template-columns:1fr}}
+</style>`;
+
+const homeRedesignCss = String.raw`<style id="visto-home-redesign">
+  :root{--green:#12A97E;--green2:#0E8A6B;--deep:#06241d;--ink:#17231f;--soft:#63736d;--line:#e3e8e5;--bg:#f6faf8;--gold:#F2C94C}
+  *{box-sizing:border-box}
+  body{margin:0;background:#fff;color:var(--ink);font-family:"Plus Jakarta Sans",system-ui,-apple-system,sans-serif}
+  a{text-decoration:none;color:inherit}
+  .rd-wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+  .rd-section{padding:70px 0}
+  .rd-k{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.07em;color:var(--green);margin-bottom:10px}
+  .rd-h2{font-size:36px;line-height:1.08;letter-spacing:-.035em;margin:0;color:var(--ink)}
+  .rd-sub{font-size:16px;line-height:1.7;color:var(--soft);max-width:680px;margin:14px 0 0}
+  .rd-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:50px;padding:0 20px;border-radius:10px;background:var(--green);color:#fff;font-weight:900;border:0;box-shadow:0 14px 28px -20px rgba(18,169,126,.8)}
+  .rd-btn:hover{background:var(--green2)}
+  .rd-btn.alt{background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:none}
+  .rd-hero{background:radial-gradient(100% 80% at 86% 0%,#EAF6EF 0%,#fff 54%);padding:44px 0 54px;border-bottom:1px solid var(--line)}
+  .rd-hero-grid{display:grid;grid-template-columns:minmax(0,1.06fr) 430px;gap:48px;align-items:center}
+  .rd-pill{display:inline-flex;align-items:center;gap:8px;background:#EAF6EF;color:#0E6F57;border:1px solid #CDEAE0;border-radius:999px;padding:8px 12px;font-size:12px;font-weight:900;margin-bottom:18px}
+  .rd-hero h1{font-size:58px;line-height:.98;letter-spacing:-.06em;margin:0;max-width:720px}
+  .rd-hero h1 span{color:var(--green)}
+  .rd-lead{font-size:18px;line-height:1.7;color:#40534d;max-width:650px;margin:20px 0 24px}
+  .rd-search{display:grid;grid-template-columns:1fr 1fr auto;gap:8px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:8px;box-shadow:0 22px 48px -34px rgba(6,40,30,.55);max-width:790px}
+  .rd-field{border-right:1px solid #edf1ee;padding:10px 14px}
+  .rd-field:last-of-type{border-right:0}
+  .rd-field span{display:block;color:var(--green);font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px}
+  .rd-field b{font-size:16px}
+  .rd-search .rd-btn{height:54px;white-space:nowrap}
+  .rd-equation{margin-top:15px;color:#6b7c76;font-weight:750;font-size:13px}
+  .rd-equation b{color:var(--ink)}
+  .rd-panel{background:#092a22;color:#fff;border-radius:18px;padding:22px;box-shadow:0 28px 70px -40px rgba(6,40,30,.7)}
+  .rd-panel-top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;margin-bottom:18px}
+  .rd-panel h3{margin:0;font-size:20px;letter-spacing:-.02em}
+  .rd-panel small{color:#9FCFB6;font-weight:800}
+  .rd-tag{background:rgba(242,201,76,.15);color:#F8DB75;border:1px solid rgba(242,201,76,.34);border-radius:999px;font-size:11px;font-weight:900;padding:7px 10px;white-space:nowrap}
+  .rd-money{background:#fff;color:var(--ink);border-radius:14px;padding:18px;margin-bottom:12px}
+  .rd-money span{display:block;color:#667973;font-size:12px;font-weight:850;margin-bottom:5px}
+  .rd-money strong{font-size:36px;letter-spacing:-.045em;line-height:1}
+  .rd-metrics{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .rd-metric{border:1px solid rgba(255,255,255,.13);border-radius:12px;padding:14px;background:rgba(255,255,255,.05)}
+  .rd-metric b{font-size:21px;display:block;color:#fff}
+  .rd-metric span{font-size:12px;color:#a8c1ba}
+  .rd-note{font-size:12px;color:#a8c1ba;line-height:1.55;margin-top:14px}
+  .rd-strip{background:#08271f;color:#d7e9e2;padding:22px 0}
+  .rd-strip-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .rd-strip-item{border-left:1px solid rgba(255,255,255,.16);padding-left:16px}
+  .rd-strip-item b{display:block;color:#fff;font-size:20px;letter-spacing:-.02em}
+  .rd-strip-item span{font-size:12px;color:#a8c1ba;font-weight:750}
+  .rd-city{background:var(--bg)}
+  .rd-head-row{display:flex;justify-content:space-between;gap:28px;align-items:end;margin-bottom:26px}
+  .rd-table{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 18px 42px -34px rgba(6,40,30,.5)}
+  .rd-row{display:grid;grid-template-columns:1.1fr .9fr .8fr 1fr .9fr;gap:0;border-bottom:1px solid var(--line)}
+  .rd-row:last-child{border-bottom:0}
+  .rd-cell{padding:17px 18px;border-right:1px solid #eef2f0;font-size:14px;color:#40534d}
+  .rd-cell:last-child{border-right:0}
+  .rd-row.head .rd-cell{font-size:11px;text-transform:uppercase;letter-spacing:.06em;font-weight:900;color:#7a8e87;background:#fbfdfc}
+  .rd-cell b{display:block;color:var(--ink);font-size:16px}
+  .rd-opp{display:inline-flex;align-items:center;border-radius:999px;padding:6px 10px;background:#EAF6EF;color:#0E6F57;font-size:12px;font-weight:900}
+  .rd-services{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:30px}
+  .rd-service{border:1px solid var(--line);border-radius:14px;padding:20px;background:#fff}
+  .rd-service .num{font-size:12px;font-weight:900;color:var(--green);margin-bottom:12px}
+  .rd-service h3{margin:0 0 8px;font-size:18px;letter-spacing:-.015em}
+  .rd-service p{margin:0;color:var(--soft);line-height:1.6;font-size:14px}
+  .rd-method{background:#fff}
+  .rd-method-grid{display:grid;grid-template-columns:340px 1fr;gap:36px;align-items:start}
+  .rd-method-aside{position:sticky;top:94px;background:#0a2b23;color:#fff;border-radius:18px;padding:24px}
+  .rd-method-aside h2{font-size:32px;line-height:1.08;letter-spacing:-.04em;margin:0 0 14px}
+  .rd-method-aside p{color:#b9d3ca;line-height:1.65;margin:0 0 20px}
+  .rd-steps{display:grid;gap:14px}
+  .rd-step{display:grid;grid-template-columns:74px 1fr 150px;gap:18px;align-items:center;border:1px solid var(--line);border-radius:14px;background:#fff;padding:18px}
+  .rd-step-n{width:54px;height:54px;border-radius:14px;background:#EAF6EF;color:var(--green);display:grid;place-items:center;font-size:18px;font-weight:950}
+  .rd-step h3{margin:0 0 6px;font-size:19px;letter-spacing:-.02em}
+  .rd-step p{margin:0;color:var(--soft);line-height:1.55;font-size:14px}
+  .rd-step-m{font-size:12px;font-weight:900;color:#0E6F57;background:#EAF6EF;border-radius:999px;padding:8px 10px;text-align:center}
+  .rd-month{background:#f9fbfa;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .rd-month-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:28px}
+  .rd-month-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px}
+  .rd-month-card b{display:block;font-size:17px;margin-bottom:8px}
+  .rd-month-card p{margin:0;color:var(--soft);line-height:1.6;font-size:14px}
+  .rd-proof{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch}
+  .rd-proof-card{border-radius:18px;padding:28px;border:1px solid var(--line)}
+  .rd-proof-card.dark{background:#092a22;color:#fff;border-color:#092a22}
+  .rd-proof-card h2{font-size:30px;line-height:1.1;letter-spacing:-.035em;margin:0 0 14px}
+  .rd-proof-card p{line-height:1.7;color:#52665f;margin:0}
+  .rd-proof-card.dark p{color:#b9d3ca}
+  .rd-list{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:10px}
+  .rd-list li{display:flex;gap:10px;color:#d7e9e2;font-weight:750;font-size:14px}
+  .rd-list li:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold);margin-top:7px;flex:none}
+  .rd-final{background:radial-gradient(120% 130% at 80% -20%,#145043 0%,#0E2E2A 44%,#071d18 100%);color:#fff;text-align:center;padding:70px 0}
+  .rd-final h2{font-size:42px;line-height:1.05;letter-spacing:-.045em;margin:0 auto 16px;max-width:760px}
+  .rd-final p{color:#b9d3ca;line-height:1.7;margin:0 auto 24px;max-width:620px}
+  .rd-final .rd-btn.alt{border-color:rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#fff}
+  .rd-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  @media(max-width:980px){.rd-hero-grid,.rd-method-grid,.rd-proof{grid-template-columns:1fr}.rd-panel{max-width:520px}.rd-method-aside{position:static}.rd-row{grid-template-columns:1fr 1fr}.rd-row.head{display:none}.rd-cell{border-bottom:1px solid #eef2f0}.rd-services,.rd-month-grid,.rd-strip-grid{grid-template-columns:1fr 1fr}.rd-step{grid-template-columns:54px 1fr}}
+  @media(max-width:640px){.rd-section{padding:48px 0}.rd-hero h1{font-size:39px}.rd-h2{font-size:29px}.rd-search{grid-template-columns:1fr}.rd-field{border-right:0;border-bottom:1px solid #edf1ee}.rd-strip-grid,.rd-services,.rd-month-grid{grid-template-columns:1fr}.rd-metrics{grid-template-columns:1fr}.rd-step{grid-template-columns:1fr}.rd-step-m{text-align:left}.rd-head-row{display:block}.rd-final h2{font-size:32px}}
 </style>`;
 
 const actionMeta = {
@@ -893,6 +988,166 @@ function generateSectorPages(sectors) {
   updateSectorDirectory(sectors);
 }
 
+function buildHomeRedesignPage() {
+  return String.raw`<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visto &middot; Facturaci&oacute;n local por ciudad</title>
+<meta name="description" content="Calcula cu&aacute;nta facturaci&oacute;n mueve Google en tu ciudad y qu&eacute; hace Visto cada mes para convertir b&uacute;squedas locales en llamadas.">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="${fontHref}" rel="stylesheet">
+${homeRedesignCss}
+${commonShellCss}
+</head>
+<body>
+${commonHeader}
+
+<main>
+  <section class="rd-hero" id="calculadora">
+    <div class="rd-wrap rd-hero-grid">
+      <div>
+        <div class="rd-pill">Facturaci&oacute;n local, no SEO a ciegas</div>
+        <h1>Calcula cu&aacute;nto factura Google en tu ciudad. <span>Y qu&eacute; parte puede ser tuya.</span></h1>
+        <p class="rd-lead">Cruzamos b&uacute;squedas locales, ticket medio y competencia en Google Maps para estimar el mercado mensual de tu oficio. Despu&eacute;s trabajamos ficha, web y reputaci&oacute;n para convertir visibilidad en llamadas.</p>
+        <div class="rd-search" aria-label="Calculadora de facturaci&oacute;n local">
+          <div class="rd-field"><span>Oficio</span><b>Fontaneros</b></div>
+          <div class="rd-field"><span>Ciudad</span><b>Madrid</b></div>
+          <a class="rd-btn" href="sector.html">Calcular facturaci&oacute;n local</a>
+        </div>
+        <div class="rd-equation"><b>b&uacute;squedas/mes</b> x <b>ticket medio</b> x <b>cuota capturable</b> = facturaci&oacute;n local estimada</div>
+      </div>
+
+      <aside class="rd-panel" aria-label="Ejemplo de mercado local">
+        <div class="rd-panel-top">
+          <div><small>Ejemplo de diagn&oacute;stico</small><h3>Fontaneros en Madrid</h3></div>
+          <span class="rd-tag">Top 3 Maps</span>
+        </div>
+        <div class="rd-money"><span>Mercado mensual estimado</span><strong>3,1M &euro;</strong></div>
+        <div class="rd-metrics">
+          <div class="rd-metric"><b>42.000</b><span>b&uacute;squedas/mes</span></div>
+          <div class="rd-metric"><b>160 &euro;</b><span>ticket medio base</span></div>
+          <div class="rd-metric"><b>68%</b><span>clics en Top 3</span></div>
+          <div class="rd-metric"><b>90 d&iacute;as</b><span>primer ciclo serio</span></div>
+        </div>
+        <p class="rd-note">No es una promesa de facturaci&oacute;n. Es el mapa de d&oacute;nde est&aacute; el dinero y qu&eacute; hay que mover para competir por llamadas.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="rd-strip">
+    <div class="rd-wrap rd-strip-grid">
+      <div class="rd-strip-item"><b>Ciudad primero</b><span>La oportunidad cambia por zona.</span></div>
+      <div class="rd-strip-item"><b>Ticket real</b><span>No todos los servicios valen igual.</span></div>
+      <div class="rd-strip-item"><b>Top 3</b><span>Ah&iacute; se concentra la demanda.</span></div>
+      <div class="rd-strip-item"><b>Llamadas</b><span>La m&eacute;trica que importa.</span></div>
+    </div>
+  </section>
+
+  <section class="rd-section rd-city" id="facturacion-ciudad">
+    <div class="rd-wrap">
+      <div class="rd-head-row">
+        <div>
+          <div class="rd-k">Facturaci&oacute;n por ciudad</div>
+          <h2 class="rd-h2">La misma b&uacute;squeda no vale igual en Madrid, Valencia o Sevilla.</h2>
+          <p class="rd-sub">Antes de tocar una ficha, decidimos d&oacute;nde est&aacute; la oportunidad: ciudad, servicio, ticket y competencia. As&iacute; se prioriza el trabajo.</p>
+        </div>
+        <a class="rd-btn alt" href="sectores.html">Ver sectores</a>
+      </div>
+      <div class="rd-table" role="table" aria-label="Facturaci&oacute;n por ciudad">
+        <div class="rd-row head"><div class="rd-cell">Ciudad</div><div class="rd-cell">B&uacute;squedas</div><div class="rd-cell">Ticket</div><div class="rd-cell">Mercado mensual</div><div class="rd-cell">Oportunidad</div></div>
+        <div class="rd-row"><div class="rd-cell"><b>Madrid</b>Alta demanda y mucha competencia</div><div class="rd-cell"><b>42.000</b>mes</div><div class="rd-cell"><b>160 &euro;</b>base</div><div class="rd-cell"><b>3,1M &euro;</b>estimado</div><div class="rd-cell"><span class="rd-opp">Alta</span></div></div>
+        <div class="rd-row"><div class="rd-cell"><b>Barcelona</b>Mercado grande, muy repartido</div><div class="rd-cell"><b>31.000</b>mes</div><div class="rd-cell"><b>155 &euro;</b>base</div><div class="rd-cell"><b>2,2M &euro;</b>estimado</div><div class="rd-cell"><span class="rd-opp">Alta</span></div></div>
+        <div class="rd-row"><div class="rd-cell"><b>Valencia</b>Buen volumen y pelea abordable</div><div class="rd-cell"><b>13.000</b>mes</div><div class="rd-cell"><b>140 &euro;</b>base</div><div class="rd-cell"><b>840K &euro;</b>estimado</div><div class="rd-cell"><span class="rd-opp">Media alta</span></div></div>
+        <div class="rd-row"><div class="rd-cell"><b>Sevilla</b>Menos volumen, buena intenci&oacute;n</div><div class="rd-cell"><b>9.800</b>mes</div><div class="rd-cell"><b>135 &euro;</b>base</div><div class="rd-cell"><b>610K &euro;</b>estimado</div><div class="rd-cell"><span class="rd-opp">Media</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rd-section">
+    <div class="rd-wrap">
+      <div class="rd-k">De mercado a llamadas</div>
+      <h2 class="rd-h2">No intentamos posicionar todo. Primero encontramos d&oacute;nde est&aacute; el dinero.</h2>
+      <p class="rd-sub">Un negocio local no necesita m&aacute;s tr&aacute;fico por deporte. Necesita salir en los servicios y ciudades que pueden acabar en presupuesto, visita o llamada.</p>
+      <div class="rd-services">
+        <article class="rd-service"><div class="num">01</div><h3>Servicios con ticket</h3><p>Separamos lo que trae volumen de lo que deja margen. No se trabaja igual una urgencia que una reforma.</p></article>
+        <article class="rd-service"><div class="num">02</div><h3>Ciudades que compensan</h3><p>Ordenamos zonas por demanda, competencia y capacidad real de atenderlas. Atacar todo suele diluir el esfuerzo.</p></article>
+        <article class="rd-service"><div class="num">03</div><h3>Se&ntilde;ales que dan llamadas</h3><p>Ficha, web, rese&ntilde;as y contenido local apuntan al mismo sitio: que el cliente te elija y llame.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="rd-section rd-method" id="metodo">
+    <div class="rd-wrap rd-method-grid">
+      <aside class="rd-method-aside">
+        <div class="rd-k" style="color:#9FCFB6">M&eacute;todo Visto</div>
+        <h2>4 acciones para convertir b&uacute;squedas en facturaci&oacute;n.</h2>
+        <p>El m&eacute;todo no vive en una diapositiva. Vive en tareas mensuales sobre tu ficha, tu web, tus rese&ntilde;as y tus llamadas.</p>
+        <a class="rd-btn" href="metodo.html">Ver m&eacute;todo completo</a>
+      </aside>
+      <div class="rd-steps">
+        <article class="rd-step"><div class="rd-step-n">1</div><div><h3>Identidad</h3><p>Google entiende qui&eacute;n eres, qu&eacute; haces y en qu&eacute; zonas trabajas.</p></div><div class="rd-step-m">Mueve visibilidad</div></article>
+        <article class="rd-step"><div class="rd-step-n">2</div><div><h3>Atractivo</h3><p>El cliente ve servicios, fotos, precios orientativos y motivos para elegirte.</p></div><div class="rd-step-m">Mueve elecci&oacute;n</div></article>
+        <article class="rd-step"><div class="rd-step-n">3</div><div><h3>Confianza</h3><p>Rese&ntilde;as, respuestas y prueba real reducen la duda antes de llamar.</p></div><div class="rd-step-m">Mueve conversi&oacute;n</div></article>
+        <article class="rd-step"><div class="rd-step-n">4</div><div><h3>Llamadas</h3><p>Botones, WhatsApp, rutas y medici&oacute;n convierten presencia en contactos.</p></div><div class="rd-step-m">Mueve facturaci&oacute;n</div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="rd-section rd-month">
+    <div class="rd-wrap">
+      <div class="rd-k">Trabajo mensual</div>
+      <h2 class="rd-h2">Qu&eacute; ves cada mes, sin humo.</h2>
+      <p class="rd-sub">El cliente no deber&iacute;a tener que adivinar qu&eacute; se ha hecho. Cada mes tiene acciones, datos y decisiones.</p>
+      <div class="rd-month-grid">
+        <article class="rd-month-card"><b>Acciones realizadas</b><p>Cambios concretos en ficha, web, servicios, fotos, rese&ntilde;as, contenido y medici&oacute;n.</p></article>
+        <article class="rd-month-card"><b>Llamadas y zonas</b><p>Qu&eacute; ha entrado, desde d&oacute;nde, por qu&eacute; servicio y qu&eacute; parte merece m&aacute;s trabajo.</p></article>
+        <article class="rd-month-card"><b>Siguiente apuesta</b><p>La prioridad del mes siguiente sale de datos: ciudad, servicio, margen y competencia.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="rd-section">
+    <div class="rd-wrap rd-proof">
+      <article class="rd-proof-card">
+        <div class="rd-k">Por qu&eacute; cambia</div>
+        <h2>El SEO local se entiende mejor cuando lo miras como una cuenta de resultados.</h2>
+        <p>Si sabes cu&aacute;nto se busca, cu&aacute;nto vale un cliente y qu&eacute; parte se queda el mapa, las decisiones son m&aacute;s simples. No se trata de publicar por publicar. Se trata de ganar las b&uacute;squedas que pueden acabar en caja.</p>
+      </article>
+      <article class="rd-proof-card dark">
+        <div class="rd-k" style="color:#9FCFB6">Lo que evitamos</div>
+        <h2>Menos promesas grandes. M&aacute;s trabajo visible.</h2>
+        <ul class="rd-list">
+          <li>No vendemos posiciones sin mirar la ciudad.</li>
+          <li>No mezclamos servicios baratos con servicios rentables.</li>
+          <li>No mandamos informes que no hablan de llamadas.</li>
+          <li>No cambiamos de estrategia cada semana.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="rd-final">
+    <div class="rd-wrap">
+      <h2>Empieza por saber cu&aacute;nto dinero se mueve en tu ciudad.</h2>
+      <p>Con esa cifra delante, el SEO deja de sonar abstracto. Ya puedes decidir qu&eacute; ciudad, qu&eacute; servicio y qu&eacute; llamada merece pelear primero.</p>
+      <div class="rd-actions">
+        <a class="rd-btn" href="#calculadora">Calcular facturaci&oacute;n local</a>
+        <a class="rd-btn alt" href="metodo.html">Ver metodolog&iacute;a</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+${commonFooter}
+</body></html>`;
+}
+
+function generateHomeRedesignPage() {
+  fs.writeFileSync(path.join(outDir, "home-redesign.html"), buildHomeRedesignPage(), "utf8");
+}
+
 function stepPageName(action, step) {
   if (action.number === 1 && step.number === "04") return "paso-categoria.html";
   return `paso-${slugify(action.name)}-${step.number}-${slugify(step.title)}.html`;
@@ -1276,6 +1531,7 @@ for (const { srcPath, dest } of pages) {
   fs.writeFileSync(destPath, normalize(html, dest), "utf8");
 }
 fs.copyFileSync(path.join(outDir, "home.html"), path.join(outDir, "index.html"));
+generateHomeRedesignPage();
 
 const sectors = parseSectorYaml();
 generateSectorPages(sectors);
@@ -1286,6 +1542,7 @@ builtPageNames = [
   ...new Set([
     ...pages.map((page) => page.dest),
     ...generatedMethodPages,
+    ...generatedRedesignPages,
     ...staticAliasPages,
     ...sectors.map((sector) => sectorPageName(sector)),
     ...allStepEntries(methodActions).map((entry) => entry.page),
@@ -1329,6 +1586,7 @@ fs.writeFileSync(
     "- metodo-fase2.html",
     "- metodo-fase3.html",
     "- metodo-fase4.html",
+    "- home-redesign.html",
     `- ${sectors.length} paginas de sector desde sectores-contenido.yaml`,
     "- 48 paginas de paso del metodo",
     "",
