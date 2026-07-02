@@ -411,6 +411,12 @@ const homeRedesignCss = String.raw`<style id="visto-home-redesign">
   .rd-equation{margin-top:15px;color:#6b7c76;font-weight:750;font-size:13px}
   .rd-equation b{color:var(--ink)}
   .rd-panel{background:#092a22;color:#fff;border-radius:18px;padding:22px;box-shadow:0 28px 70px -40px rgba(6,40,30,.7)}
+  .rd-side{display:grid;gap:14px}
+  .rd-photo{position:relative;min-height:255px;border-radius:20px;overflow:hidden;background:#dfe9e4;box-shadow:0 22px 52px -34px rgba(6,40,30,.7)}
+  .rd-photo img{width:100%;height:100%;object-fit:cover;display:block}
+  .rd-photo-note{position:absolute;left:16px;right:16px;bottom:16px;background:rgba(6,26,21,.88);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:14px 16px;color:#fff}
+  .rd-photo-note b{display:block;font-size:17px;margin-bottom:3px}
+  .rd-photo-note span{display:block;font-size:12px;color:#c7ddd5;line-height:1.45}
   .rd-panel-top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;margin-bottom:18px}
   .rd-panel h3{margin:0;font-size:20px;letter-spacing:-.02em}
   .rd-panel small{color:#9FCFB6;font-weight:800}
@@ -451,6 +457,7 @@ const homeRedesignCss = String.raw`<style id="visto-home-redesign">
   .rd-steps{display:grid;gap:14px}
   .rd-step{display:grid;grid-template-columns:74px 1fr 150px;gap:18px;align-items:center;border:1px solid var(--line);border-radius:14px;background:#fff;padding:18px}
   .rd-step-n{width:54px;height:54px;border-radius:14px;background:#EAF6EF;color:var(--green);display:grid;place-items:center;font-size:18px;font-weight:950}
+  .rd-step-img{width:74px;height:64px;border-radius:12px;background:#e8f1ed center/cover no-repeat;box-shadow:inset 0 0 0 1px rgba(0,0,0,.04)}
   .rd-step h3{margin:0 0 6px;font-size:19px;letter-spacing:-.02em}
   .rd-step p{margin:0;color:var(--soft);line-height:1.55;font-size:14px}
   .rd-step-m{font-size:12px;font-weight:900;color:#0E6F57;background:#EAF6EF;border-radius:999px;padding:8px 10px;text-align:center}
@@ -462,6 +469,9 @@ const homeRedesignCss = String.raw`<style id="visto-home-redesign">
   .rd-proof{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch}
   .rd-proof-card{border-radius:18px;padding:28px;border:1px solid var(--line)}
   .rd-proof-card.dark{background:#092a22;color:#fff;border-color:#092a22}
+  .rd-proof-card.photo{padding:0;overflow:hidden;background:#fff}
+  .rd-proof-card.photo img{width:100%;height:230px;object-fit:cover;display:block}
+  .rd-proof-pad{padding:24px 26px}
   .rd-proof-card h2{font-size:30px;line-height:1.1;letter-spacing:-.035em;margin:0 0 14px}
   .rd-proof-card p{line-height:1.7;color:#52665f;margin:0}
   .rd-proof-card.dark p{color:#b9d3ca}
@@ -473,8 +483,8 @@ const homeRedesignCss = String.raw`<style id="visto-home-redesign">
   .rd-final p{color:#b9d3ca;line-height:1.7;margin:0 auto 24px;max-width:620px}
   .rd-final .rd-btn.alt{border-color:rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#fff}
   .rd-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-  @media(max-width:980px){.rd-hero-grid,.rd-method-grid,.rd-proof{grid-template-columns:1fr}.rd-panel{max-width:520px}.rd-method-aside{position:static}.rd-row{grid-template-columns:1fr 1fr}.rd-row.head{display:none}.rd-cell{border-bottom:1px solid #eef2f0}.rd-services,.rd-month-grid,.rd-strip-grid{grid-template-columns:1fr 1fr}.rd-step{grid-template-columns:54px 1fr}}
-  @media(max-width:640px){.rd-section{padding:48px 0}.rd-hero h1{font-size:39px}.rd-h2{font-size:29px}.rd-search{grid-template-columns:1fr}.rd-field{border-right:0;border-bottom:1px solid #edf1ee}.rd-strip-grid,.rd-services,.rd-month-grid{grid-template-columns:1fr}.rd-metrics{grid-template-columns:1fr}.rd-step{grid-template-columns:1fr}.rd-step-m{text-align:left}.rd-head-row{display:block}.rd-final h2{font-size:32px}}
+  @media(max-width:980px){.rd-hero-grid,.rd-method-grid,.rd-proof{grid-template-columns:1fr}.rd-side{max-width:560px}.rd-panel{max-width:560px}.rd-method-aside{position:static}.rd-row{grid-template-columns:1fr 1fr}.rd-row.head{display:none}.rd-cell{border-bottom:1px solid #eef2f0}.rd-services,.rd-month-grid,.rd-strip-grid{grid-template-columns:1fr 1fr}.rd-step{grid-template-columns:74px 1fr}}
+  @media(max-width:640px){.rd-section{padding:48px 0}.rd-hero h1{font-size:39px}.rd-h2{font-size:29px}.rd-search{grid-template-columns:1fr}.rd-field{border-right:0;border-bottom:1px solid #edf1ee}.rd-strip-grid,.rd-services,.rd-month-grid{grid-template-columns:1fr}.rd-metrics{grid-template-columns:1fr}.rd-step{grid-template-columns:1fr}.rd-step-img{width:100%;height:150px}.rd-step-m{text-align:left}.rd-head-row{display:block}.rd-final h2{font-size:32px}}
 </style>`;
 
 const actionMeta = {
@@ -988,7 +998,19 @@ function generateSectorPages(sectors) {
   updateSectorDirectory(sectors);
 }
 
+function extractHomeCssImage(className) {
+  const html = fs.readFileSync(updatedHomePath, "utf8");
+  const pattern = new RegExp(`\\.${escapeRegExp(className)}\\{background-image:url\\((data:image\\/[^)]+)\\)\\}`);
+  return html.match(pattern)?.[1] ?? "";
+}
+
 function buildHomeRedesignPage() {
+  const heroImage = extractHomeCssImage("img-hero");
+  const mapImage = extractHomeCssImage("img-m1");
+  const methodImage2 = extractHomeCssImage("img-m2");
+  const methodImage3 = extractHomeCssImage("img-m3");
+  const methodImage4 = extractHomeCssImage("img-m4");
+
   return String.raw`<!DOCTYPE html>
 <html lang="es"><head>
 <meta charset="UTF-8">
@@ -1009,8 +1031,8 @@ ${commonHeader}
     <div class="rd-wrap rd-hero-grid">
       <div>
         <div class="rd-pill">Facturaci&oacute;n local, no SEO a ciegas</div>
-        <h1>Calcula cu&aacute;nto factura Google en tu ciudad. <span>Y qu&eacute; parte puede ser tuya.</span></h1>
-        <p class="rd-lead">Cruzamos b&uacute;squedas locales, ticket medio y competencia en Google Maps para estimar el mercado mensual de tu oficio. Despu&eacute;s trabajamos ficha, web y reputaci&oacute;n para convertir visibilidad en llamadas.</p>
+        <h1>Google ya est&aacute; mandando trabajos en tu ciudad. <span>Mira cu&aacute;nto hay en juego.</span></h1>
+        <p class="rd-lead">Primero ponemos n&uacute;meros: qu&eacute; busca la gente, qu&eacute; vale cada servicio y qu&eacute; se est&aacute; llevando el Top 3 del mapa. Luego decidimos qu&eacute; tocar para que entren m&aacute;s llamadas buenas.</p>
         <div class="rd-search" aria-label="Calculadora de facturaci&oacute;n local">
           <div class="rd-field"><span>Oficio</span><b>Fontaneros</b></div>
           <div class="rd-field"><span>Ciudad</span><b>Madrid</b></div>
@@ -1019,20 +1041,26 @@ ${commonHeader}
         <div class="rd-equation"><b>b&uacute;squedas/mes</b> x <b>ticket medio</b> x <b>cuota capturable</b> = facturaci&oacute;n local estimada</div>
       </div>
 
-      <aside class="rd-panel" aria-label="Ejemplo de mercado local">
-        <div class="rd-panel-top">
-          <div><small>Ejemplo de diagn&oacute;stico</small><h3>Fontaneros en Madrid</h3></div>
-          <span class="rd-tag">Top 3 Maps</span>
+      <div class="rd-side">
+        <div class="rd-photo">
+          <img src="${heroImage}" alt="Negocio local atendiendo a clientes">
+          <div class="rd-photo-note"><b>No va de visitas. Va de trabajos.</b><span>El informe empieza por ciudad, servicio y ticket. Si no hay dinero claro, no se prioriza.</span></div>
         </div>
-        <div class="rd-money"><span>Mercado mensual estimado</span><strong>3,1M &euro;</strong></div>
-        <div class="rd-metrics">
-          <div class="rd-metric"><b>42.000</b><span>b&uacute;squedas/mes</span></div>
-          <div class="rd-metric"><b>160 &euro;</b><span>ticket medio base</span></div>
-          <div class="rd-metric"><b>68%</b><span>clics en Top 3</span></div>
-          <div class="rd-metric"><b>90 d&iacute;as</b><span>primer ciclo serio</span></div>
-        </div>
-        <p class="rd-note">No es una promesa de facturaci&oacute;n. Es el mapa de d&oacute;nde est&aacute; el dinero y qu&eacute; hay que mover para competir por llamadas.</p>
-      </aside>
+        <aside class="rd-panel" aria-label="Ejemplo de mercado local">
+          <div class="rd-panel-top">
+            <div><small>Ejemplo de diagn&oacute;stico</small><h3>Fontaneros en Madrid</h3></div>
+            <span class="rd-tag">Top 3 Maps</span>
+          </div>
+          <div class="rd-money"><span>Mercado mensual estimado</span><strong>3,1M &euro;</strong></div>
+          <div class="rd-metrics">
+            <div class="rd-metric"><b>42.000</b><span>b&uacute;squedas/mes</span></div>
+            <div class="rd-metric"><b>160 &euro;</b><span>ticket medio base</span></div>
+            <div class="rd-metric"><b>68%</b><span>clics en Top 3</span></div>
+            <div class="rd-metric"><b>90 d&iacute;as</b><span>primer ciclo serio</span></div>
+          </div>
+          <p class="rd-note">No es una promesa de facturaci&oacute;n. Es una forma de ver d&oacute;nde merece la pena pelear.</p>
+        </aside>
+      </div>
     </div>
   </section>
 
@@ -1068,8 +1096,8 @@ ${commonHeader}
   <section class="rd-section">
     <div class="rd-wrap">
       <div class="rd-k">De mercado a llamadas</div>
-      <h2 class="rd-h2">No intentamos posicionar todo. Primero encontramos d&oacute;nde est&aacute; el dinero.</h2>
-      <p class="rd-sub">Un negocio local no necesita m&aacute;s tr&aacute;fico por deporte. Necesita salir en los servicios y ciudades que pueden acabar en presupuesto, visita o llamada.</p>
+      <h2 class="rd-h2">No se trabaja todo a la vez. Se empieza por lo que puede acabar en caja.</h2>
+      <p class="rd-sub">Un negocio local no necesita m&aacute;s tr&aacute;fico por deporte. Necesita aparecer cuando alguien busca un servicio que paga facturas.</p>
       <div class="rd-services">
         <article class="rd-service"><div class="num">01</div><h3>Servicios con ticket</h3><p>Separamos lo que trae volumen de lo que deja margen. No se trabaja igual una urgencia que una reforma.</p></article>
         <article class="rd-service"><div class="num">02</div><h3>Ciudades que compensan</h3><p>Ordenamos zonas por demanda, competencia y capacidad real de atenderlas. Atacar todo suele diluir el esfuerzo.</p></article>
@@ -1087,10 +1115,10 @@ ${commonHeader}
         <a class="rd-btn" href="metodo.html">Ver m&eacute;todo completo</a>
       </aside>
       <div class="rd-steps">
-        <article class="rd-step"><div class="rd-step-n">1</div><div><h3>Identidad</h3><p>Google entiende qui&eacute;n eres, qu&eacute; haces y en qu&eacute; zonas trabajas.</p></div><div class="rd-step-m">Mueve visibilidad</div></article>
-        <article class="rd-step"><div class="rd-step-n">2</div><div><h3>Atractivo</h3><p>El cliente ve servicios, fotos, precios orientativos y motivos para elegirte.</p></div><div class="rd-step-m">Mueve elecci&oacute;n</div></article>
-        <article class="rd-step"><div class="rd-step-n">3</div><div><h3>Confianza</h3><p>Rese&ntilde;as, respuestas y prueba real reducen la duda antes de llamar.</p></div><div class="rd-step-m">Mueve conversi&oacute;n</div></article>
-        <article class="rd-step"><div class="rd-step-n">4</div><div><h3>Llamadas</h3><p>Botones, WhatsApp, rutas y medici&oacute;n convierten presencia en contactos.</p></div><div class="rd-step-m">Mueve facturaci&oacute;n</div></article>
+        <article class="rd-step"><div class="rd-step-img" style="background-image:url(${mapImage})"></div><div><h3>Identidad</h3><p>Google entiende qui&eacute;n eres, qu&eacute; haces y en qu&eacute; zonas trabajas.</p></div><div class="rd-step-m">Mueve visibilidad</div></article>
+        <article class="rd-step"><div class="rd-step-img" style="background-image:url(${methodImage2})"></div><div><h3>Atractivo</h3><p>El cliente ve servicios, fotos, precios orientativos y motivos para elegirte.</p></div><div class="rd-step-m">Mueve elecci&oacute;n</div></article>
+        <article class="rd-step"><div class="rd-step-img" style="background-image:url(${methodImage3})"></div><div><h3>Confianza</h3><p>Rese&ntilde;as, respuestas y prueba real reducen la duda antes de llamar.</p></div><div class="rd-step-m">Mueve conversi&oacute;n</div></article>
+        <article class="rd-step"><div class="rd-step-img" style="background-image:url(${methodImage4})"></div><div><h3>Llamadas</h3><p>Botones, WhatsApp, rutas y medici&oacute;n convierten presencia en contactos.</p></div><div class="rd-step-m">Mueve facturaci&oacute;n</div></article>
       </div>
     </div>
   </section>
@@ -1110,10 +1138,13 @@ ${commonHeader}
 
   <section class="rd-section">
     <div class="rd-wrap rd-proof">
-      <article class="rd-proof-card">
+      <article class="rd-proof-card photo">
+        <img src="${mapImage}" alt="Cliente buscando negocios locales en Google Maps">
+        <div class="rd-proof-pad">
         <div class="rd-k">Por qu&eacute; cambia</div>
-        <h2>El SEO local se entiende mejor cuando lo miras como una cuenta de resultados.</h2>
+        <h2>El mapa no es un escaparate. Es una cola de clientes.</h2>
         <p>Si sabes cu&aacute;nto se busca, cu&aacute;nto vale un cliente y qu&eacute; parte se queda el mapa, las decisiones son m&aacute;s simples. No se trata de publicar por publicar. Se trata de ganar las b&uacute;squedas que pueden acabar en caja.</p>
+        </div>
       </article>
       <article class="rd-proof-card dark">
         <div class="rd-k" style="color:#9FCFB6">Lo que evitamos</div>
