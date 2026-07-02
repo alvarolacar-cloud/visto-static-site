@@ -1,0 +1,33 @@
+# Findings
+
+- Source home file: `inputs/home-C-mezcla.html`.
+- Existing output folder: `outputs/visto-site`.
+- Existing generator: `work/build-visto-site.mjs`.
+- Memory note used: prior screenshot-led replication guidance says to treat provided visual/source files as source of truth and avoid loose redesign.
+- New home contains the requested shared shell: `.topbar` + `header.site-nav`, and `footer.vfoot`.
+- New home contains the replacement section as `<section class="datos">` with CSS under `SEO BASADO EN DATOS`.
+- The generator now switches `home.html` to the new Downloads source instead of the old `RankeaLocal 2` home.
+- The final build uses a single shared header hash (`2a42b24b73d5`) and a single shared footer hash (`bca54f07b196`) across all six HTML pages.
+- A legacy `.promo` strip remained above the shared header on internal pages after the first rebuild; it was removed in the generator.
+- Home-specific `.mkt .vfoot-*` CSS from the updated source overrode the shared footer on mobile, so shared footer styles now include `.mkt`-prefixed overrides to keep home and internal pages visually aligned.
+- The prior shared header used a custom `.tb-inner` layout and direct flex on `.site-nav`, which did not match the source home header. The source header uses `.wrap` inside both topbar and nav, with `--maxw:1244px`, `.site-nav .wrap{padding:13px 0}`, and `.topbar .wrap{justify-content:center}`.
+- `fontaneros-madrid-visto.html` maps to `fontaneros-madrid.html`, a city-specific market/results page for Fontaneros in Madrid.
+- `nuestros-resultados-visto.html` maps to `nuestros-resultados.html`, the page behind the shared `Nuestros Resultados` navigation link.
+- Corrected method source: `inputs/metodo-completo.md`.
+- The method markdown defines 4 actions, 48 steps, and 304 tasks. Each action has 12 steps and 76 tasks.
+- Current generated method pages:
+  - `metodo-fase1.html`: Identidad / Que Google te encuentre.
+  - `metodo-fase2.html`: Atractivo / Que el cliente te elija.
+  - `metodo-fase3.html`: Confianza / Que se fíen de ti.
+  - `metodo-fase4.html`: Conversión / Que te llamen.
+- `paso-categoria.html` remains the only built individual step page; generated phase pages link step 04 of action 1 to it and leave other unbuilt step links as `#`.
+- Latest build contains 11 HTML pages. Header hash is `bd9018dc8108` and footer hash is `d44a108fd795` across all generated HTML pages.
+- Superseded: every method step now has a page. The build contains 48 step pages total; `paso-categoria.html` is reused for Identidad step 04 and the other 47 step pages are generated from markdown.
+- Latest build contains 58 unique HTML pages. Header hash remains `bd9018dc8108` and footer hash remains `d44a108fd795` across all generated HTML pages.
+- All method phase cards link to step pages; there are no remaining "Sin pagina propia" labels in the phase pages.
+- Sector content source: `inputs/sectores-contenido.yaml`.
+- The sector YAML contains 61 sectors. `sector.html` remains the Fontaneros page, and the other 60 sectors are generated as `sector-{slug}.html`.
+- `sectores.html` now builds its directory from the YAML-derived data and links to generated sector pages; the old `sector.html?sector=...` pattern is absent.
+- Latest build contains 119 HTML files: existing site pages, 48 method step pages, `index.html`, and 61 sector pages.
+- Sequential HTTP verification passed for all 119 HTML routes. Static sector verification found no missing H1s, service grids, market cards, or six-card work-front blocks.
+- The shared footer now links visible sector names to generated sector pages when available; final footer verification found zero links to missing pages.

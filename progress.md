@@ -1,0 +1,41 @@
+# Progress
+
+- Started update requested on 2026-07-02.
+- Confirmed the new home file exists in Downloads and the current output has six HTML pages.
+- Inspected new home and current generator. Found that the generator emitted the old shared header/footer and used the old `RankeaLocal 2\home-C-mezcla.html` source for home.
+- Rewrote `work\build-visto-site.mjs` to use `inputs/home-C-mezcla.html` for `home.html` and shared constants for the new topbar/nav and dark footer.
+- Rebuilt `outputs\visto-site` with exactly six HTML pages.
+- Removed leftover legacy `.promo` header strip from internal pages.
+- Verified identical header/footer hashes across all six pages, footer links limited to built pages or `#`, and the new home section `SEO basado en datos` present while the old section is absent.
+- Restarted local server at `http://127.0.0.1:4173/home.html`; all six HTML routes returned HTTP 200.
+- Browser audit at mobile width 390px confirmed no horizontal overflow, nav/search hidden as expected, `.datos-grid` at one column, and footer at one column.
+- Corrected the shared header to match the updated home HTML source structure: `.topbar > .wrap`, `header.site-nav > .wrap`, source-width `1244px`, centered topbar, pill search, check logo, and source breakpoints (`1050px` / `860px`).
+- Rebuilt and refreshed `http://127.0.0.1:4173/home.html`; all six routes still return HTTP 200 and the shared header hash is `3acc0f4ab855` across all pages.
+- Added `fontaneros-madrid.html` and `nuestros-resultados.html` from the new source files in `RankeaLocal 2`.
+- Updated shared header/footer links so `Nuestros Resultados` points to `nuestros-resultados.html`.
+- Connected the home calculator and the `sector.html` city selector to `fontaneros-madrid.html` for Fontaneros + Madrid.
+- Rebuilt the site with eight HTML pages; verified all routes return HTTP 200, internal `.html` links resolve, and shared header/footer hashes match across all eight pages.
+- Read the corrected method document at `inputs/metodo-completo.md`.
+- Extended `work\build-visto-site.mjs` so method phase pages are generated from the markdown instead of hand-authored one by one.
+- Added generated pages `metodo-fase2.html`, `metodo-fase3.html`, and `metodo-fase4.html`; regenerated `metodo-fase1.html` with the same structure so all four phases contain 12 steps and 76 tasks.
+- Updated the shared footer to link to all built method phase pages and kept non-built links as `#`.
+- Fixed method subnavigation so `metodo.html`, `metodo-fase1.html`, `metodo-fase2.html`, `metodo-fase3.html`, and `metodo-fase4.html` link to each other and mark the current tab.
+- Rebuilt `outputs\visto-site` with 11 HTML pages and restarted the local server at `http://127.0.0.1:4173/`.
+- Verified all 11 routes return HTTP 200, all internal `.html` links resolve, shared header/footer hashes match across all 11 pages, and no purple/blue keyword leftovers were found by `rg`.
+- Tried to audit the new phase pages in the in-app browser, but the browser automation timed out while navigating the embedded-image HTML. HTTP and static HTML verification succeeded.
+- Added individual pages for all 48 method steps. `paso-categoria.html` remains the existing source-based page for Identidad step 04; the other 47 step pages are generated from `metodo-completo.md`.
+- Updated every method phase step card so it links to its own step page; no cards now show "Sin pagina propia".
+- Updated the existing `paso-categoria.html` previous/next navigation to point to the generated neighboring step pages.
+- Rebuilt `outputs\visto-site` with 58 unique HTML pages: the site pages, 4 method phase pages, and 48 step pages.
+- Verified all 58 generated routes return HTTP 200 sequentially, no internal `.html` links are missing, and shared header/footer hashes still match across all 58 pages.
+- Added `index.html` as an alias/copy of `home.html` so `http://127.0.0.1:4173/` loads the site instead of Python's directory listing.
+- Rebuilt with 59 HTML files including `index.html`; verified `/` returns HTTP 200, does not contain "Directory listing", and contains Visto content.
+- Read `inputs/sectores-contenido.yaml`; it contains 61 sectors with hero, data cards, searched services, paid services, market cards, work fronts, and buyer profiles.
+- Extended `work\build-visto-site.mjs` with a small schema-specific YAML parser and sector renderer that reuses the existing `sector.html` visual layout.
+- Generated `sector.html` from the Fontaneros YAML entry and 60 additional sector pages such as `sector-electricistas.html`, `sector-reformas-integrales.html`, and `sector-antenistas.html`.
+- Updated `sectores.html` so its directory data comes from the YAML and every sector card points to a real generated page instead of `sector.html?sector=...`.
+- Rebuilt `outputs\visto-site` with 119 HTML files and restarted the local server at `http://127.0.0.1:4173/`.
+- Verified all 119 HTML routes return HTTP 200 sequentially; verified 61 sector pages have non-empty H1s, service grids, market cards, and 6 work-front cards; verified no old sector query links remain.
+- Browser audit confirmed `sectores.html` renders sector links to generated pages and `sector-electricistas.html` shows the YAML H1, data facts, 8 searched services, 12 market cards, 6 fronts, 2 profiles, and shared footer.
+- Updated the visible sector links in the shared footer to point to generated sector pages where those pages now exist.
+- Final static verification after the footer update passed for 119 routes, 61 sector pages, zero old sector query links, and zero footer links to missing pages.
