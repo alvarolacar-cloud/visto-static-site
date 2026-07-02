@@ -47,7 +47,7 @@ const commonHeader = String.raw`<div class="topbar">
       <a href="nuestros-resultados.html">Nuestros Resultados</a>
       <a href="#">Blog</a>
     </nav>
-    <a class="nav-cta" href="home.html#contacto">Calcular mi mercado <span class="bolt">&#9889;</span></a>
+    <a class="nav-cta" href="home.html#contacto">Calcular mi facturación <span class="bolt">&#9889;</span></a>
   </div>
   </header>`;
 
