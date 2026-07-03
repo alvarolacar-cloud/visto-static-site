@@ -397,11 +397,14 @@ const homeRedesignCss = String.raw`<style id="visto-home-redesign">
   .mk-hero h1{font-size:36px;line-height:1.04;letter-spacing:0;margin:0 auto;max-width:760px;text-wrap:balance}
   .mk-hero p{font-size:14px;line-height:1.45;color:#e1f1eb;max-width:720px;margin:9px auto 14px}
   .mk-search{max-width:740px;margin:0 auto;background:rgba(255,255,255,.88);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.58);border-radius:10px;box-shadow:0 26px 70px -42px rgba(0,0,0,.8);padding:9px;color:var(--ink)}
-  .mk-tabs{display:flex;justify-content:center;gap:8px;margin-bottom:7px;flex-wrap:wrap}
-  .mk-tab{height:26px;padding:0 12px;border:0;border-bottom:3px solid transparent;background:transparent;color:#5a6e67;font:inherit;font-size:12px;font-weight:900;cursor:pointer}
-  .mk-tab.active{color:var(--green2);border-bottom-color:var(--green)}
+  .mk-tabs{display:flex;justify-content:center;gap:7px;margin-bottom:8px;flex-wrap:wrap}
+  .mk-tab{height:30px;padding:0 12px;border:1px solid #dce6e1;border-radius:999px;background:#fff;color:#526861;font:inherit;font-size:12px;font-weight:900;cursor:pointer;box-shadow:0 10px 20px -20px rgba(0,0,0,.45)}
+  .mk-tab:hover{border-color:#9FCFB6;color:var(--green2)}
+  .mk-tab.active{color:#fff;border-color:var(--green);background:var(--green)}
   .mk-searchbar{display:grid;grid-template-columns:1fr 1fr auto;gap:10px;align-items:center}
-  .mk-field{height:44px;background:#fff;border:1px solid #dce6e1;border-radius:8px;padding:6px 13px;text-align:left}
+  .mk-field{position:relative;height:44px;background:#fff;border:1px solid #dce6e1;border-radius:8px;padding:6px 38px 6px 13px;text-align:left;transition:border-color .16s ease,box-shadow .16s ease}
+  .mk-field:after{content:"\2192";position:absolute;right:12px;top:50%;transform:translateY(-50%);color:var(--green2);font-weight:950}
+  .mk-field:hover{border-color:#9FCFB6;box-shadow:0 12px 22px -24px rgba(0,0,0,.8)}
   .mk-field span{display:block;font-size:10px;text-transform:uppercase;font-weight:900;color:var(--green2);margin-bottom:2px}
   .mk-field b{font-size:15px;color:var(--ink)}
   .mk-submit{height:44px;border-radius:8px;border:0;background:var(--green);color:#fff;font-weight:950;padding:0 20px;cursor:pointer;box-shadow:0 15px 28px -22px rgba(18,169,126,.9)}
