@@ -428,10 +428,15 @@ const homeRedesignCss = String.raw`<style id="visto-home-redesign">
   .mk-card:hover{transform:translateY(-3px);box-shadow:0 22px 38px -30px rgba(0,0,0,.7);border-color:#9FCFB6}
   .mk-card img{width:100%;height:148px;object-fit:cover;display:block;background:#e8f1ed}
   .mk-badge{position:absolute;left:10px;top:10px;background:rgba(255,255,255,.94);color:#0E6F57;border-radius:6px;padding:6px 8px;font-size:11px;font-weight:950;border:1px solid rgba(18,169,126,.18)}
+  .mk-save{position:absolute;right:10px;top:10px;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.94);color:#0E6F57;border:1px solid rgba(18,169,126,.18);font-size:17px;font-weight:950}
+  .mk-price-bubble{position:absolute;left:10px;top:106px;background:rgba(6,36,29,.92);color:#fff;border:1px solid rgba(255,255,255,.18);border-radius:7px;padding:7px 9px;font-size:13px;font-weight:950;box-shadow:0 12px 26px -22px rgba(0,0,0,.9)}
   .mk-card-body{padding:13px}
-  .mk-card-body h3{font-size:15px;line-height:1.2;margin:0 0 7px;color:var(--ink)}
-  .mk-card-body p{font-size:12px;line-height:1.45;color:var(--soft);margin:0 0 10px}
-  .mk-card-meta{display:flex;justify-content:space-between;gap:8px;color:var(--green2);font-size:12px;font-weight:950}
+  .mk-price{font-size:18px;line-height:1.05;font-weight:950;color:var(--ink);margin-bottom:8px}
+  .mk-price span{display:block;font-size:11px;line-height:1.35;font-weight:850;color:var(--soft);margin-top:3px}
+  .mk-card-body h3{font-size:15px;line-height:1.2;margin:0 0 6px;color:var(--ink)}
+  .mk-card-body p{font-size:12px;line-height:1.42;color:var(--soft);margin:0 0 10px}
+  .mk-card-meta{display:flex;justify-content:space-between;gap:8px;color:var(--green2);font-size:12px;font-weight:950;border-top:1px solid #edf2ef;padding-top:10px}
+  .mk-card-meta b{font-size:12px;color:var(--green2)}
   .mk-feature{background:#f4f7f5}
   .mk-feature-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:34px;align-items:center}
   .mk-feature-photo{position:relative;border-radius:8px;overflow:hidden;box-shadow:0 22px 56px -40px rgba(0,0,0,.7)}
@@ -1057,22 +1062,30 @@ ${commonHeader}
         <a class="mk-card" href="sector.html">
           <img src="${mapImage}" alt="B&uacute;squeda de negocios locales en Google Maps">
           <span class="mk-badge">Alta demanda</span>
-          <div class="mk-card-body"><h3>Fontaneros en Madrid</h3><p>Urgencias, fugas y reformas con intenci&oacute;n alta.</p><div class="mk-card-meta"><span>3,1M &euro;/mes</span><span>Ver</span></div></div>
+          <span class="mk-save" aria-hidden="true">&#9825;</span>
+          <span class="mk-price-bubble">3,1M &euro;/mes</span>
+          <div class="mk-card-body"><div class="mk-price">3,1M &euro;/mes<span>mercado local estimado</span></div><h3>Fontaneros en Madrid</h3><p>Urgencias, fugas y reformas con intenci&oacute;n alta.</p><div class="mk-card-meta"><span>42K b&uacute;squedas</span><b>Ver mercado &rarr;</b></div></div>
         </a>
         <a class="mk-card" href="sector-reformas-integrales.html">
           <img src="${methodImage2}" alt="Profesional local hablando con un cliente">
           <span class="mk-badge">Ticket alto</span>
-          <div class="mk-card-body"><h3>Reformas integrales</h3><p>Menos volumen, mucho m&aacute;s margen por operaci&oacute;n.</p><div class="mk-card-meta"><span>Desde 3.500 &euro;</span><span>Ver</span></div></div>
+          <span class="mk-save" aria-hidden="true">&#9825;</span>
+          <span class="mk-price-bubble">3.500 &euro;+</span>
+          <div class="mk-card-body"><div class="mk-price">3.500 &euro;+<span>ticket medio alto</span></div><h3>Reformas integrales</h3><p>Menos volumen, mucho m&aacute;s margen por operaci&oacute;n.</p><div class="mk-card-meta"><span>Ticket alto</span><b>Ver mercado &rarr;</b></div></div>
         </a>
         <a class="mk-card" href="sector-dentistas.html">
           <img src="${methodImage3}" alt="Cliente revisando rese&ntilde;as en el tel&eacute;fono">
           <span class="mk-badge">Confianza</span>
-          <div class="mk-card-body"><h3>Dentistas y cl&iacute;nicas</h3><p>Rese&ntilde;as, proximidad y llamada clara deciden mucho.</p><div class="mk-card-meta"><span>Local + reputaci&oacute;n</span><span>Ver</span></div></div>
+          <span class="mk-save" aria-hidden="true">&#9825;</span>
+          <span class="mk-price-bubble">Top 3 Maps</span>
+          <div class="mk-card-body"><div class="mk-price">Top 3 Maps<span>donde se decide la llamada</span></div><h3>Dentistas y cl&iacute;nicas</h3><p>Rese&ntilde;as, proximidad y llamada clara deciden mucho.</p><div class="mk-card-meta"><span>Reputaci&oacute;n</span><b>Ver mercado &rarr;</b></div></div>
         </a>
         <a class="mk-card" href="sector-restaurantes.html">
           <img src="${methodImage4}" alt="Profesional atendiendo llamadas de clientes">
           <span class="mk-badge">Repetici&oacute;n</span>
-          <div class="mk-card-body"><h3>Restaurantes</h3><p>Reservas, rutas, fotos, horarios y prueba social.</p><div class="mk-card-meta"><span>Mapa + decisi&oacute;n</span><span>Ver</span></div></div>
+          <span class="mk-save" aria-hidden="true">&#9825;</span>
+          <span class="mk-price-bubble">Reservas</span>
+          <div class="mk-card-body"><div class="mk-price">Reservas<span>rutas, llamadas y decisiones</span></div><h3>Restaurantes</h3><p>Reservas, rutas, fotos, horarios y prueba social.</p><div class="mk-card-meta"><span>Mapa + decisi&oacute;n</span><b>Ver mercado &rarr;</b></div></div>
         </a>
       </div>
     </div>
