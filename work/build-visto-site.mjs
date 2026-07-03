@@ -1087,6 +1087,34 @@ ${commonHeader}
           <span class="mk-price-bubble">Reservas</span>
           <div class="mk-card-body"><div class="mk-price">Reservas<span>rutas, llamadas y decisiones</span></div><h3>Restaurantes</h3><p>Reservas, rutas, fotos, horarios y prueba social.</p><div class="mk-card-meta"><span>Mapa + decisi&oacute;n</span><b>Ver mercado &rarr;</b></div></div>
         </a>
+        <a class="mk-card" href="sector-electricistas.html">
+          <img src="${mapImage}" alt="Cliente buscando un profesional urgente en el mapa">
+          <span class="mk-badge">Urgencias</span>
+          <span class="mk-save" aria-hidden="true">&#9825;</span>
+          <span class="mk-price-bubble">24/7</span>
+          <div class="mk-card-body"><div class="mk-price">Servicios urgentes<span>intenci&oacute;n inmediata</span></div><h3>Electricistas</h3><p>Aver&iacute;as, boletines y llamadas con poca comparaci&oacute;n.</p><div class="mk-card-meta"><span>Alta intenci&oacute;n</span><b>Ver mercado &rarr;</b></div></div>
+        </a>
+        <a class="mk-card" href="sector-abogados.html">
+          <img src="${methodImage3}" alt="Cliente comparando opciones locales desde el tel&eacute;fono">
+          <span class="mk-badge">Confianza</span>
+          <span class="mk-save" aria-hidden="true">&#9825;</span>
+          <span class="mk-price-bubble">Consulta</span>
+          <div class="mk-card-body"><div class="mk-price">Decisi&oacute;n local<span>confianza y especialidad</span></div><h3>Abogados</h3><p>Especialidades, rese&ntilde;as y cercan&iacute;a antes del contacto.</p><div class="mk-card-meta"><span>Reputaci&oacute;n</span><b>Ver mercado &rarr;</b></div></div>
+        </a>
+        <a class="mk-card" href="sector-peluquerias.html">
+          <img src="${heroImage}" alt="Negocio local con clientes entrando desde b&uacute;squedas cercanas">
+          <span class="mk-badge">Cercan&iacute;a</span>
+          <span class="mk-save" aria-hidden="true">&#9825;</span>
+          <span class="mk-price-bubble">Reservas</span>
+          <div class="mk-card-body"><div class="mk-price">Barrio a barrio<span>fotos, horarios y rese&ntilde;as</span></div><h3>Peluquer&iacute;as</h3><p>Clientes cercanos, servicios claros y recurrencia mensual.</p><div class="mk-card-meta"><span>Local + visual</span><b>Ver mercado &rarr;</b></div></div>
+        </a>
+        <a class="mk-card" href="sector-empresas-de-limpieza.html">
+          <img src="${methodImage2}" alt="Profesional explicando un servicio a una clienta">
+          <span class="mk-badge">B2B</span>
+          <span class="mk-save" aria-hidden="true">&#9825;</span>
+          <span class="mk-price-bubble">Contratos</span>
+          <div class="mk-card-body"><div class="mk-price">Ticket recurrente<span>oficinas, comunidades y locales</span></div><h3>Empresas de limpieza</h3><p>Presupuestos recurrentes donde la ficha filtra mucho.</p><div class="mk-card-meta"><span>Valor mensual</span><b>Ver mercado &rarr;</b></div></div>
+        </a>
       </div>
     </div>
   </section>
