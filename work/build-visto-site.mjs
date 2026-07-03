@@ -389,25 +389,25 @@ const homeRedesignCss = String.raw`<style id="visto-home-redesign">
   body{margin:0;background:#fff;color:var(--ink);font-family:"Plus Jakarta Sans",system-ui,-apple-system,sans-serif}
   a{text-decoration:none;color:inherit}
   .mk-wrap{max-width:1180px;margin:0 auto;padding:0 22px}
-  .mk-hero{position:relative;min-height:460px;background:center/cover no-repeat;color:#fff;display:grid;align-items:center;overflow:hidden}
+  .mk-hero{position:relative;min-height:410px;background:center/cover no-repeat;color:#fff;display:grid;align-items:center;overflow:hidden}
   .mk-hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,31,24,.78),rgba(5,31,24,.48) 46%,rgba(5,31,24,.78)),linear-gradient(90deg,rgba(5,31,24,.35),rgba(5,31,24,.08))}
-  .mk-hero .mk-wrap{position:relative;width:100%;padding-top:34px;padding-bottom:34px;text-align:center}
-  .mk-brandline{display:inline-flex;align-items:center;gap:8px;background:rgba(5,31,24,.58);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:7px 12px;font-size:12px;font-weight:900;margin-bottom:12px}
+  .mk-hero .mk-wrap{position:relative;width:100%;padding-top:26px;padding-bottom:26px;text-align:center}
+  .mk-brandline{display:inline-flex;align-items:center;gap:8px;background:rgba(5,31,24,.58);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:6px 11px;font-size:12px;font-weight:900;margin-bottom:10px}
   .mk-brandline:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold)}
-  .mk-hero h1{font-size:40px;line-height:1.05;letter-spacing:0;margin:0 auto;max-width:840px;text-wrap:balance}
-  .mk-hero p{font-size:15px;line-height:1.5;color:#e1f1eb;max-width:760px;margin:11px auto 17px}
-  .mk-search{max-width:760px;margin:0 auto;background:rgba(255,255,255,.88);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.58);border-radius:10px;box-shadow:0 26px 70px -42px rgba(0,0,0,.8);padding:10px;color:var(--ink)}
-  .mk-tabs{display:flex;justify-content:center;gap:8px;margin-bottom:8px;flex-wrap:wrap}
-  .mk-tab{height:28px;padding:0 12px;border:0;border-bottom:3px solid transparent;background:transparent;color:#5a6e67;font:inherit;font-size:12px;font-weight:900;cursor:pointer}
+  .mk-hero h1{font-size:36px;line-height:1.04;letter-spacing:0;margin:0 auto;max-width:760px;text-wrap:balance}
+  .mk-hero p{font-size:14px;line-height:1.45;color:#e1f1eb;max-width:720px;margin:9px auto 14px}
+  .mk-search{max-width:740px;margin:0 auto;background:rgba(255,255,255,.88);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.58);border-radius:10px;box-shadow:0 26px 70px -42px rgba(0,0,0,.8);padding:9px;color:var(--ink)}
+  .mk-tabs{display:flex;justify-content:center;gap:8px;margin-bottom:7px;flex-wrap:wrap}
+  .mk-tab{height:26px;padding:0 12px;border:0;border-bottom:3px solid transparent;background:transparent;color:#5a6e67;font:inherit;font-size:12px;font-weight:900;cursor:pointer}
   .mk-tab.active{color:var(--green2);border-bottom-color:var(--green)}
   .mk-searchbar{display:grid;grid-template-columns:1fr 1fr auto;gap:10px;align-items:center}
-  .mk-field{height:48px;background:#fff;border:1px solid #dce6e1;border-radius:8px;padding:7px 13px;text-align:left}
-  .mk-field span{display:block;font-size:11px;text-transform:uppercase;font-weight:900;color:var(--green2);margin-bottom:3px}
+  .mk-field{height:44px;background:#fff;border:1px solid #dce6e1;border-radius:8px;padding:6px 13px;text-align:left}
+  .mk-field span{display:block;font-size:10px;text-transform:uppercase;font-weight:900;color:var(--green2);margin-bottom:2px}
   .mk-field b{font-size:15px;color:var(--ink)}
-  .mk-submit{height:48px;border-radius:8px;border:0;background:var(--green);color:#fff;font-weight:950;padding:0 20px;cursor:pointer;box-shadow:0 15px 28px -22px rgba(18,169,126,.9)}
+  .mk-submit{height:44px;border-radius:8px;border:0;background:var(--green);color:#fff;font-weight:950;padding:0 20px;cursor:pointer;box-shadow:0 15px 28px -22px rgba(18,169,126,.9)}
   .mk-submit:hover{background:var(--green2)}
-  .mk-quick{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:8px}
-  .mk-quick a{font-size:12px;font-weight:850;color:#0E6F57;background:#EAF6EF;border:1px solid #CDEAE0;border-radius:999px;padding:6px 10px}
+  .mk-quick{display:flex;justify-content:center;gap:7px;flex-wrap:wrap;margin-top:7px}
+  .mk-quick a{font-size:11px;font-weight:850;color:#0E6F57;background:#EAF6EF;border:1px solid #CDEAE0;border-radius:999px;padding:6px 9px}
   .mk-stats{background:#fff;border-bottom:1px solid var(--line)}
   .mk-stats-grid{display:grid;grid-template-columns:1.35fr repeat(3,1fr);gap:0;align-items:center}
   .mk-stats-intro{padding:18px 28px 18px 0;font-size:17px;line-height:1.3;font-weight:850;color:var(--ink)}
@@ -417,11 +417,11 @@ const homeRedesignCss = String.raw`<style id="visto-home-redesign">
   .mk-proof{padding:12px 0 0;text-align:center;color:var(--soft);font-size:12px;font-weight:800}
   .mk-proof-row{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:8px}
   .mk-proof-row span{color:#7a8984;font-size:16px;font-weight:950}
-  .mk-section{padding:34px 0}
-  .mk-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:14px}
+  .mk-section{padding:28px 0}
+  .mk-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:12px}
   .mk-k{font-size:12px;text-transform:uppercase;font-weight:950;letter-spacing:.06em;color:var(--green);margin-bottom:8px}
-  .mk-h2{font-size:27px;line-height:1.15;letter-spacing:0;margin:0;color:var(--ink)}
-  .mk-sub{font-size:14px;line-height:1.5;color:var(--soft);margin:6px 0 0;max-width:660px}
+  .mk-h2{font-size:25px;line-height:1.15;letter-spacing:0;margin:0;color:var(--ink)}
+  .mk-sub{font-size:13px;line-height:1.45;color:var(--soft);margin:5px 0 0;max-width:640px}
   .mk-link{color:var(--green2);font-size:13px;font-weight:950;white-space:nowrap}
   .mk-card-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
   .mk-card{position:relative;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;box-shadow:0 14px 34px -32px rgba(0,0,0,.6);transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease}
@@ -477,7 +477,7 @@ const homeRedesignCss = String.raw`<style id="visto-home-redesign">
   .mk-final h2{font-size:30px;line-height:1.12;margin:0 0 8px;letter-spacing:0}
   .mk-final p{margin:0;color:var(--soft);line-height:1.6}
   @media(max-width:1020px){.mk-card-grid{grid-template-columns:repeat(2,1fr)}.mk-feature-grid,.mk-dark-grid{grid-template-columns:1fr}.mk-method-grid{grid-template-columns:repeat(2,1fr)}.mk-city-grid{grid-template-columns:repeat(3,1fr)}.mk-stats-grid{grid-template-columns:1fr 1fr}.mk-stats-intro{grid-column:1/-1;padding:24px 0;text-align:center}.mk-stat:nth-child(2n){border-left:0}}
-  @media(max-width:680px){.mk-hero{min-height:620px}.mk-hero .mk-wrap{padding-top:38px;padding-bottom:32px}.mk-hero h1{font-size:34px}.mk-hero p{font-size:15px}.mk-search{padding:12px}.mk-field,.mk-submit{height:52px}.mk-searchbar{grid-template-columns:1fr}.mk-submit{width:100%}.mk-stats-grid,.mk-card-grid,.mk-method-grid,.mk-city-grid,.mk-final-box{grid-template-columns:1fr}.mk-stat{border-left:0;border-top:1px solid var(--line)}.mk-head{display:block}.mk-link{display:inline-flex;margin-top:12px}.mk-feature-photo img{height:280px}.mk-row{grid-template-columns:1fr}.mk-final-box .mk-btn{width:100%}}
+  @media(max-width:680px){.mk-hero{min-height:540px}.mk-hero .mk-wrap{padding-top:24px;padding-bottom:24px}.mk-hero h1{font-size:30px;line-height:1.06}.mk-hero p{font-size:14px;line-height:1.45;margin:8px auto 12px}.mk-search{padding:10px}.mk-field,.mk-submit{height:48px}.mk-searchbar{grid-template-columns:1fr}.mk-submit{width:100%}.mk-quick{display:none}.mk-section{padding:24px 0}.mk-h2{font-size:24px}.mk-opportunities .mk-sub{display:none}.mk-stats-grid,.mk-card-grid,.mk-method-grid,.mk-city-grid,.mk-final-box{grid-template-columns:1fr}.mk-stat{border-left:0;border-top:1px solid var(--line)}.mk-head{display:block;margin-bottom:10px}.mk-link{display:inline-flex;margin-top:10px}.mk-feature-photo img{height:280px}.mk-row{grid-template-columns:1fr}.mk-final-box .mk-btn{width:100%}}
 </style>`;
 
 const actionMeta = {
@@ -1048,7 +1048,7 @@ ${commonHeader}
     </div>
   </section>
 
-  <section class="mk-section" id="oportunidades">
+  <section class="mk-section mk-opportunities" id="oportunidades">
     <div class="mk-wrap">
       <div class="mk-head">
         <div>
