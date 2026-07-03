@@ -417,8 +417,8 @@ const homeRedesignCss = String.raw`<style id="visto-home-redesign">
   .mk-proof{padding:12px 0 0;text-align:center;color:var(--soft);font-size:12px;font-weight:800}
   .mk-proof-row{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:8px}
   .mk-proof-row span{color:#7a8984;font-size:16px;font-weight:950}
-  .mk-section{padding:28px 0}
-  .mk-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:12px}
+  .mk-section{padding:24px 0}
+  .mk-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:10px}
   .mk-k{font-size:12px;text-transform:uppercase;font-weight:950;letter-spacing:.06em;color:var(--green);margin-bottom:8px}
   .mk-h2{font-size:25px;line-height:1.15;letter-spacing:0;margin:0;color:var(--ink)}
   .mk-sub{font-size:13px;line-height:1.45;color:var(--soft);margin:5px 0 0;max-width:640px}
@@ -426,16 +426,16 @@ const homeRedesignCss = String.raw`<style id="visto-home-redesign">
   .mk-card-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
   .mk-card{position:relative;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;box-shadow:0 14px 34px -32px rgba(0,0,0,.6);transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease}
   .mk-card:hover{transform:translateY(-3px);box-shadow:0 22px 38px -30px rgba(0,0,0,.7);border-color:#9FCFB6}
-  .mk-card img{width:100%;height:148px;object-fit:cover;display:block;background:#e8f1ed}
+  .mk-card img{width:100%;height:120px;object-fit:cover;display:block;background:#e8f1ed}
   .mk-badge{position:absolute;left:10px;top:10px;background:rgba(255,255,255,.94);color:#0E6F57;border-radius:6px;padding:6px 8px;font-size:11px;font-weight:950;border:1px solid rgba(18,169,126,.18)}
   .mk-save{position:absolute;right:10px;top:10px;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.94);color:#0E6F57;border:1px solid rgba(18,169,126,.18);font-size:17px;font-weight:950}
-  .mk-price-bubble{position:absolute;left:10px;top:106px;background:rgba(6,36,29,.92);color:#fff;border:1px solid rgba(255,255,255,.18);border-radius:7px;padding:7px 9px;font-size:13px;font-weight:950;box-shadow:0 12px 26px -22px rgba(0,0,0,.9)}
-  .mk-card-body{padding:13px}
-  .mk-price{font-size:18px;line-height:1.05;font-weight:950;color:var(--ink);margin-bottom:8px}
-  .mk-price span{display:block;font-size:11px;line-height:1.35;font-weight:850;color:var(--soft);margin-top:3px}
+  .mk-price-bubble{position:absolute;left:10px;top:83px;background:rgba(6,36,29,.92);color:#fff;border:1px solid rgba(255,255,255,.18);border-radius:7px;padding:6px 8px;font-size:12px;font-weight:950;box-shadow:0 12px 26px -22px rgba(0,0,0,.9)}
+  .mk-card-body{padding:11px 12px 12px}
+  .mk-price{font-size:12px;line-height:1.35;font-weight:950;color:var(--green2);margin-bottom:5px;text-transform:uppercase}
+  .mk-price span{display:none}
   .mk-card-body h3{font-size:15px;line-height:1.2;margin:0 0 6px;color:var(--ink)}
-  .mk-card-body p{font-size:12px;line-height:1.42;color:var(--soft);margin:0 0 10px}
-  .mk-card-meta{display:flex;justify-content:space-between;gap:8px;color:var(--green2);font-size:12px;font-weight:950;border-top:1px solid #edf2ef;padding-top:10px}
+  .mk-card-body p{font-size:12px;line-height:1.35;color:var(--soft);margin:0 0 8px}
+  .mk-card-meta{display:flex;justify-content:space-between;gap:8px;color:var(--green2);font-size:12px;font-weight:950;border-top:1px solid #edf2ef;padding-top:8px}
   .mk-card-meta b{font-size:12px;color:var(--green2)}
   .mk-feature{background:#f4f7f5}
   .mk-feature-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:34px;align-items:center}
