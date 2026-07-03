@@ -388,90 +388,91 @@ const homeRedesignCss = String.raw`<style id="visto-home-redesign">
   *{box-sizing:border-box}
   body{margin:0;background:#fff;color:var(--ink);font-family:"Plus Jakarta Sans",system-ui,-apple-system,sans-serif}
   a{text-decoration:none;color:inherit}
-  .py-wrap{max-width:1180px;margin:0 auto;padding:0 22px}
-  .py-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 20px;border-radius:8px;background:var(--green);color:#fff;font-weight:900;border:1px solid var(--green);box-shadow:0 16px 30px -24px rgba(18,169,126,.9)}
-  .py-btn:hover{background:var(--green2);border-color:var(--green2)}
-  .py-btn.alt{background:#fff;color:var(--ink);border-color:var(--line);box-shadow:none}
-  .py-k{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.07em;color:var(--green);margin-bottom:10px}
-  .py-h2{font-size:38px;line-height:1.08;margin:0;letter-spacing:0;color:var(--ink);max-width:780px}
-  .py-sub{font-size:16px;line-height:1.7;color:var(--soft);max-width:690px;margin:14px 0 0}
-  .py-section{padding:72px 0}
-  .py-hero{position:relative;min-height:650px;color:#fff;background:center/cover no-repeat;display:flex;align-items:flex-end;overflow:hidden}
-  .py-hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,23,18,.91) 0%,rgba(5,30,24,.72) 43%,rgba(5,30,24,.2) 78%),linear-gradient(0deg,rgba(4,23,18,.86) 0%,rgba(4,23,18,0) 34%)}
-  .py-hero-inner{position:relative;width:100%;padding:84px 0 30px}
-  .py-hero-copy{max-width:760px;padding-bottom:34px}
-  .py-eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(255,255,255,.24);background:rgba(255,255,255,.09);border-radius:999px;padding:9px 13px;font-size:12px;font-weight:900;margin-bottom:18px}
-  .py-eyebrow:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold)}
-  .py-hero h1{font-size:66px;line-height:.96;letter-spacing:0;margin:0;max-width:820px}
-  .py-hero h1 span{color:#8FE2C7}
-  .py-hero p{font-size:19px;line-height:1.65;color:#d9eee8;max-width:650px;margin:22px 0 26px}
-  .py-actions{display:flex;gap:10px;flex-wrap:wrap}
-  .py-hero .py-btn.alt{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.28);color:#fff}
-  .py-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid rgba(255,255,255,.18);background:rgba(5,30,24,.82);backdrop-filter:blur(12px);border-radius:10px;overflow:hidden}
-  .py-fact{padding:19px 20px;border-right:1px solid rgba(255,255,255,.14)}
-  .py-fact:last-child{border-right:0}
-  .py-fact b{display:block;font-size:22px;line-height:1;color:#fff}
-  .py-fact span{display:block;margin-top:7px;font-size:12px;font-weight:800;color:#aac9bf}
-  .py-intro{background:var(--cream);border-bottom:1px solid var(--line)}
-  .py-intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}
-  .py-intro-text{max-width:560px}
-  .py-intro-list{display:grid;gap:12px}
-  .py-intro-row{display:grid;grid-template-columns:42px 1fr;gap:14px;align-items:start;background:#fff;border:1px solid var(--line);border-radius:8px;padding:16px}
-  .py-intro-row b:first-child{width:42px;height:42px;border-radius:8px;background:#EAF6EF;color:var(--green);display:grid;place-items:center;font-size:15px}
-  .py-intro-row strong{display:block;font-size:17px;margin:0 0 4px}
-  .py-intro-row span{display:block;color:var(--soft);font-size:14px;line-height:1.55}
-  .py-work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
-  .py-work-card{border:1px solid var(--line);border-radius:8px;background:#fff;overflow:hidden}
-  .py-work-card img{width:100%;height:210px;object-fit:cover;display:block;background:#e8f1ed}
-  .py-work-body{padding:20px}
-  .py-work-body small{display:block;color:var(--green);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.05em;margin-bottom:9px}
-  .py-work-body h3{margin:0 0 8px;font-size:21px;letter-spacing:0}
-  .py-work-body p{margin:0;color:var(--soft);font-size:14px;line-height:1.65}
-  .py-example{background:#0a2b23;color:#fff}
-  .py-example .py-k{color:#9FCFB6}
-  .py-example .py-h2{color:#fff}
-  .py-example .py-sub{color:#b9d3ca}
-  .py-example-grid{display:grid;grid-template-columns:1fr 440px;gap:34px;align-items:stretch;margin-top:30px}
-  .py-ticket{background:#fff;color:var(--ink);border-radius:8px;padding:8px;border:1px solid rgba(255,255,255,.1);box-shadow:0 26px 70px -46px rgba(0,0,0,.7)}
-  .py-ticket-head{padding:18px 18px 14px;border-bottom:1px solid var(--line)}
-  .py-ticket-head b{display:block;font-size:22px;letter-spacing:0}
-  .py-ticket-head span{display:block;color:var(--soft);font-size:13px;margin-top:4px}
-  .py-ticket-row{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;padding:15px 18px;border-bottom:1px solid #eef2f0}
-  .py-ticket-row:last-child{border-bottom:0}
-  .py-ticket-row b{font-size:15px}
-  .py-ticket-row small{display:block;color:var(--soft);margin-top:3px}
-  .py-ticket-row strong{font-size:20px;color:var(--green);white-space:nowrap}
-  .py-map-photo{position:relative;min-height:100%;border-radius:8px;overflow:hidden;background:#dfe9e4}
-  .py-map-photo img{width:100%;height:100%;min-height:360px;object-fit:cover;display:block}
-  .py-map-note{position:absolute;left:18px;right:18px;bottom:18px;border-radius:8px;background:rgba(6,29,23,.9);border:1px solid rgba(255,255,255,.16);padding:16px;color:#fff}
-  .py-map-note b{display:block;font-size:18px;margin-bottom:5px}
-  .py-map-note span{color:#c7ddd5;font-size:13px;line-height:1.5}
-  .py-method{background:#fff}
-  .py-method-head{display:flex;justify-content:space-between;gap:28px;align-items:end;margin-bottom:30px}
-  .py-timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:8px;overflow:hidden}
-  .py-week{padding:22px;border-right:1px solid var(--line);background:#fff;min-height:230px}
-  .py-week:last-child{border-right:0}
-  .py-week-n{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#EAF6EF;color:var(--green);font-weight:950;margin-bottom:18px}
-  .py-week h3{font-size:19px;line-height:1.2;margin:0 0 10px;letter-spacing:0}
-  .py-week p{margin:0;color:var(--soft);line-height:1.6;font-size:14px}
-  .py-proof{background:#f8fbf9;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .py-proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-  .py-proof-card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:26px}
-  .py-proof-card.dark{background:#0a2b23;color:#fff;border-color:#0a2b23}
-  .py-proof-card h3{font-size:28px;line-height:1.12;margin:0 0 18px;letter-spacing:0}
-  .py-proof-list{list-style:none;padding:0;margin:0;display:grid;gap:13px}
-  .py-proof-list li{display:flex;gap:10px;color:#536861;font-weight:750;line-height:1.45}
-  .py-proof-card.dark .py-proof-list li{color:#d7e9e2}
-  .py-proof-list li:before{content:"";width:9px;height:9px;border-radius:50%;background:var(--green);margin-top:7px;flex:none}
-  .py-proof-card.dark .py-proof-list li:before{background:var(--gold)}
-  .py-final{position:relative;color:#fff;background:center/cover no-repeat;overflow:hidden}
-  .py-final:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,25,20,.92),rgba(5,25,20,.65))}
-  .py-final .py-wrap{position:relative;padding-top:74px;padding-bottom:74px}
-  .py-final h2{font-size:44px;line-height:1.05;margin:0 0 16px;letter-spacing:0;max-width:760px}
-  .py-final p{color:#d5ebe4;line-height:1.7;max-width:620px;margin:0 0 24px}
-  .py-final .py-btn.alt{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.25);color:#fff}
-  @media(max-width:980px){.py-hero{min-height:620px}.py-hero h1{font-size:52px}.py-facts,.py-work-grid,.py-timeline{grid-template-columns:1fr 1fr}.py-fact:nth-child(2){border-right:0}.py-fact:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.14)}.py-intro-grid,.py-example-grid,.py-proof-grid{grid-template-columns:1fr}.py-map-photo img{height:390px}.py-method-head{display:block}.py-method-head .py-btn{margin-top:18px}.py-week:nth-child(2){border-right:0}.py-week:nth-child(-n+2){border-bottom:1px solid var(--line)}}
-  @media(max-width:640px){.py-section{padding:52px 0}.py-hero{min-height:620px}.py-hero-inner{padding:70px 0 22px}.py-hero h1{font-size:40px}.py-hero p{font-size:16px}.py-h2{font-size:30px}.py-actions{display:grid}.py-btn{width:100%}.py-facts,.py-work-grid,.py-timeline{grid-template-columns:1fr}.py-fact,.py-fact:nth-child(2){border-right:0;border-bottom:1px solid rgba(255,255,255,.14)}.py-fact:last-child{border-bottom:0}.py-week,.py-week:nth-child(2){border-right:0;border-bottom:1px solid var(--line)}.py-week:last-child{border-bottom:0}.py-ticket-row{grid-template-columns:1fr}.py-ticket-row strong{white-space:normal}.py-final h2{font-size:32px}}
+  .mk-wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+  .mk-hero{position:relative;min-height:560px;background:center/cover no-repeat;color:#fff;display:grid;align-items:center;overflow:hidden}
+  .mk-hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,31,24,.78),rgba(5,31,24,.48) 46%,rgba(5,31,24,.78)),linear-gradient(90deg,rgba(5,31,24,.35),rgba(5,31,24,.08))}
+  .mk-hero .mk-wrap{position:relative;width:100%;padding-top:54px;padding-bottom:54px;text-align:center}
+  .mk-brandline{display:inline-flex;align-items:center;gap:8px;background:rgba(5,31,24,.58);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:8px 12px;font-size:12px;font-weight:900;margin-bottom:18px}
+  .mk-brandline:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold)}
+  .mk-hero h1{font-size:48px;line-height:1.05;letter-spacing:0;margin:0 auto;max-width:840px;text-wrap:balance}
+  .mk-hero p{font-size:17px;line-height:1.65;color:#e1f1eb;max-width:760px;margin:16px auto 26px}
+  .mk-search{max-width:760px;margin:0 auto;background:rgba(255,255,255,.86);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.58);border-radius:10px;box-shadow:0 26px 70px -42px rgba(0,0,0,.8);padding:14px;color:var(--ink)}
+  .mk-tabs{display:flex;justify-content:center;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+  .mk-tab{height:34px;padding:0 12px;border:0;border-bottom:3px solid transparent;background:transparent;color:#5a6e67;font:inherit;font-size:12px;font-weight:900;cursor:pointer}
+  .mk-tab.active{color:var(--green2);border-bottom-color:var(--green)}
+  .mk-searchbar{display:grid;grid-template-columns:1fr 1fr auto;gap:10px;align-items:center}
+  .mk-field{height:56px;background:#fff;border:1px solid #dce6e1;border-radius:8px;padding:9px 13px;text-align:left}
+  .mk-field span{display:block;font-size:11px;text-transform:uppercase;font-weight:900;color:var(--green2);margin-bottom:3px}
+  .mk-field b{font-size:15px;color:var(--ink)}
+  .mk-submit{height:56px;border-radius:8px;border:0;background:var(--green);color:#fff;font-weight:950;padding:0 20px;cursor:pointer;box-shadow:0 15px 28px -22px rgba(18,169,126,.9)}
+  .mk-submit:hover{background:var(--green2)}
+  .mk-quick{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:12px}
+  .mk-quick a{font-size:12px;font-weight:850;color:#0E6F57;background:#EAF6EF;border:1px solid #CDEAE0;border-radius:999px;padding:7px 10px}
+  .mk-stats{background:#fff;border-bottom:1px solid var(--line)}
+  .mk-stats-grid{display:grid;grid-template-columns:1.35fr repeat(3,1fr);gap:0;align-items:center}
+  .mk-stats-intro{padding:26px 28px 26px 0;font-size:18px;line-height:1.35;font-weight:850;color:var(--ink)}
+  .mk-stat{padding:24px 28px;border-left:1px solid var(--line);text-align:center}
+  .mk-stat b{display:block;font-size:28px;line-height:1;color:var(--ink)}
+  .mk-stat span{display:block;margin-top:8px;font-size:12px;color:var(--soft);font-weight:800}
+  .mk-proof{padding:20px 0 0;text-align:center;color:var(--soft);font-size:13px;font-weight:800}
+  .mk-proof-row{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:12px}
+  .mk-proof-row span{color:#7a8984;font-size:18px;font-weight:950}
+  .mk-section{padding:58px 0}
+  .mk-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:20px}
+  .mk-k{font-size:12px;text-transform:uppercase;font-weight:950;letter-spacing:.06em;color:var(--green);margin-bottom:8px}
+  .mk-h2{font-size:30px;line-height:1.15;letter-spacing:0;margin:0;color:var(--ink)}
+  .mk-sub{font-size:15px;line-height:1.65;color:var(--soft);margin:9px 0 0;max-width:660px}
+  .mk-link{color:var(--green2);font-size:13px;font-weight:950;white-space:nowrap}
+  .mk-card-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .mk-card{position:relative;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;box-shadow:0 14px 34px -32px rgba(0,0,0,.6);transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease}
+  .mk-card:hover{transform:translateY(-3px);box-shadow:0 22px 38px -30px rgba(0,0,0,.7);border-color:#9FCFB6}
+  .mk-card img{width:100%;height:148px;object-fit:cover;display:block;background:#e8f1ed}
+  .mk-badge{position:absolute;left:10px;top:10px;background:rgba(255,255,255,.94);color:#0E6F57;border-radius:6px;padding:6px 8px;font-size:11px;font-weight:950;border:1px solid rgba(18,169,126,.18)}
+  .mk-card-body{padding:13px}
+  .mk-card-body h3{font-size:15px;line-height:1.2;margin:0 0 7px;color:var(--ink)}
+  .mk-card-body p{font-size:12px;line-height:1.45;color:var(--soft);margin:0 0 10px}
+  .mk-card-meta{display:flex;justify-content:space-between;gap:8px;color:var(--green2);font-size:12px;font-weight:950}
+  .mk-feature{background:#f4f7f5}
+  .mk-feature-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:34px;align-items:center}
+  .mk-feature-photo{position:relative;border-radius:8px;overflow:hidden;box-shadow:0 22px 56px -40px rgba(0,0,0,.7)}
+  .mk-feature-photo img{width:100%;height:360px;object-fit:cover;display:block}
+  .mk-float{position:absolute;left:18px;top:18px;background:#fff;border-radius:8px;border:1px solid var(--line);padding:14px 15px;box-shadow:0 16px 32px -28px rgba(0,0,0,.8);text-align:left}
+  .mk-float small{display:block;color:var(--soft);font-size:11px;font-weight:850;margin-bottom:7px}
+  .mk-float b{display:block;font-size:22px;color:var(--ink)}
+  .mk-float span{display:block;color:var(--green2);font-size:12px;font-weight:950;margin-top:5px}
+  .mk-feature-copy h2{font-size:32px;line-height:1.12;margin:0 0 12px;letter-spacing:0}
+  .mk-feature-copy p{font-size:15px;line-height:1.72;color:var(--soft);margin:0 0 18px}
+  .mk-actions{display:flex;gap:10px;flex-wrap:wrap}
+  .mk-btn{display:inline-flex;align-items:center;justify-content:center;height:46px;border-radius:8px;background:var(--green);color:#fff;font-size:14px;font-weight:950;padding:0 18px;border:1px solid var(--green)}
+  .mk-btn.alt{background:#fff;color:var(--ink);border-color:var(--line)}
+  .mk-city-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+  .mk-city{position:relative;min-height:142px;border-radius:8px;overflow:hidden;color:#fff;display:flex;align-items:end;padding:12px;background:center/cover no-repeat}
+  .mk-city:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,31,24,.08),rgba(5,31,24,.78))}
+  .mk-city b,.mk-city span{position:relative;display:block}
+  .mk-city b{font-size:14px;margin-bottom:3px}
+  .mk-city span{font-size:11px;color:#d3e8e1;font-weight:800}
+  .mk-method-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .mk-method-card{border:1px solid var(--line);border-radius:8px;padding:18px;background:#fff;min-height:184px}
+  .mk-method-card small{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#EAF6EF;color:var(--green);font-weight:950;margin-bottom:14px}
+  .mk-method-card h3{font-size:18px;line-height:1.2;margin:0 0 8px}
+  .mk-method-card p{font-size:13px;line-height:1.58;color:var(--soft);margin:0}
+  .mk-dark{background:#092a22;color:#fff}
+  .mk-dark-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+  .mk-dark .mk-k{color:#9FCFB6}
+  .mk-dark h2{font-size:32px;line-height:1.12;margin:0 0 12px;letter-spacing:0}
+  .mk-dark p{color:#c5ddd5;line-height:1.7;margin:0 0 18px}
+  .mk-dark-panel{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:10px}
+  .mk-row{display:grid;grid-template-columns:1fr auto;gap:12px;padding:14px;border-bottom:1px solid rgba(255,255,255,.1);align-items:center}
+  .mk-row:last-child{border-bottom:0}
+  .mk-row b{font-size:14px}
+  .mk-row span{font-size:12px;color:#adc9c0}
+  .mk-row strong{color:#F8DB75;font-size:18px;white-space:nowrap}
+  .mk-final{background:#f8fbf9;border-top:1px solid var(--line)}
+  .mk-final-box{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:8px;padding:24px}
+  .mk-final h2{font-size:30px;line-height:1.12;margin:0 0 8px;letter-spacing:0}
+  .mk-final p{margin:0;color:var(--soft);line-height:1.6}
+  @media(max-width:1020px){.mk-card-grid{grid-template-columns:repeat(2,1fr)}.mk-feature-grid,.mk-dark-grid{grid-template-columns:1fr}.mk-method-grid{grid-template-columns:repeat(2,1fr)}.mk-city-grid{grid-template-columns:repeat(3,1fr)}.mk-stats-grid{grid-template-columns:1fr 1fr}.mk-stats-intro{grid-column:1/-1;padding:24px 0;text-align:center}.mk-stat:nth-child(2n){border-left:0}}
+  @media(max-width:680px){.mk-hero{min-height:640px}.mk-hero .mk-wrap{padding-top:42px;padding-bottom:36px}.mk-hero h1{font-size:34px}.mk-hero p{font-size:15px}.mk-searchbar{grid-template-columns:1fr}.mk-submit{width:100%}.mk-stats-grid,.mk-card-grid,.mk-method-grid,.mk-city-grid,.mk-final-box{grid-template-columns:1fr}.mk-stat{border-left:0;border-top:1px solid var(--line)}.mk-head{display:block}.mk-link{display:inline-flex;margin-top:12px}.mk-feature-photo img{height:280px}.mk-row{grid-template-columns:1fr}.mk-final-box .mk-btn{width:100%}}
 </style>`;
 
 const actionMeta = {
@@ -1014,135 +1015,167 @@ ${commonShellCss}
 ${commonHeader}
 
 <main>
-  <section class="py-hero" id="calculadora" style="background-image:url(${heroImage})">
-    <div class="py-hero-inner">
-      <div class="py-wrap">
-        <div class="py-hero-copy">
-          <div class="py-eyebrow">Para negocios locales que necesitan llamadas</div>
-          <h1>Que te encuentren en Google Maps. <span>Que te llamen.</span></h1>
-          <p>Antes de hablar de SEO miramos algo m&aacute;s simple: cu&aacute;nta gente busca tu servicio en tu ciudad, cu&aacute;nto dinero mueve y qu&eacute; tendr&iacute;a que cambiar para que te elijan a ti.</p>
-          <div class="py-actions">
-            <a class="py-btn" href="#facturacion-ciudad">Ver ejemplo por ciudad</a>
-            <a class="py-btn alt" href="#metodo">C&oacute;mo trabajamos</a>
-          </div>
+  <section class="mk-hero" id="calculadora" style="background-image:url(${heroImage})">
+    <div class="mk-wrap">
+      <div class="mk-brandline">SEO local basado en datos</div>
+      <h1>Encuentra cu&aacute;nto factura Google en tu ciudad.</h1>
+      <p>Elige sector y ciudad. Visto te ense&ntilde;a d&oacute;nde hay demanda, qu&eacute; servicios dejan dinero y qu&eacute; hay que tocar para convertir b&uacute;squedas en llamadas.</p>
+      <div class="mk-search" aria-label="Calculadora de mercado local">
+        <div class="mk-tabs">
+          <button class="mk-tab active" type="button">Fontaneros</button>
+          <button class="mk-tab" type="button">Reformas</button>
+          <button class="mk-tab" type="button">Cl&iacute;nicas</button>
+          <button class="mk-tab" type="button">Restaurantes</button>
+          <button class="mk-tab" type="button">M&aacute;s sectores</button>
         </div>
-        <div class="py-facts" aria-label="Resumen de la propuesta">
-          <div class="py-fact"><b>Ciudad</b><span>empezamos por tu zona real</span></div>
-          <div class="py-fact"><b>Servicios</b><span>separamos volumen y margen</span></div>
-          <div class="py-fact"><b>Llamadas</b><span>medimos lo que entra</span></div>
-          <div class="py-fact"><b>90 d&iacute;as</b><span>primer ciclo de trabajo</span></div>
+        <div class="mk-searchbar">
+          <a class="mk-field" href="sector.html"><span>Tu sector</span><b>Fontaneros</b></a>
+          <a class="mk-field" href="fontaneros-madrid.html"><span>Tu ciudad</span><b>Madrid</b></a>
+          <a class="mk-submit" href="#oportunidades">Calcular mercado</a>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-section py-intro">
-    <div class="py-wrap py-intro-grid">
-      <div class="py-intro-text">
-        <div class="py-k">La idea en una frase</div>
-        <h2 class="py-h2">No vendemos visitas. Buscamos llamadas que puedan acabar en caja.</h2>
-        <p class="py-sub">Un due&ntilde;o de pyme no necesita un informe enorme. Necesita saber si en su ciudad hay demanda, qu&eacute; servicio deja dinero y qu&eacute; hay que ordenar para parecer la mejor opci&oacute;n cuando alguien busca.</p>
-      </div>
-      <div class="py-intro-list">
-        <div class="py-intro-row"><b>1</b><div><strong>Miramos la ciudad</strong><span>Cu&aacute;ntas personas buscan, qu&eacute; barrios o zonas pesan m&aacute;s y qui&eacute;n aparece arriba.</span></div></div>
-        <div class="py-intro-row"><b>2</b><div><strong>Lo traducimos a euros</strong><span>No vale igual una urgencia, una instalaci&oacute;n o una reforma. Priorizamos por margen.</span></div></div>
-        <div class="py-intro-row"><b>3</b><div><strong>Arreglamos lo visible</strong><span>Ficha, web, fotos, rese&ntilde;as y botones de llamada. Lo que ve el cliente antes de elegir.</span></div></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-section">
-    <div class="py-wrap">
-      <div class="py-k">Lo que recibe un negocio</div>
-      <h2 class="py-h2">Tres piezas que un empresario entiende a la primera.</h2>
-      <p class="py-sub">Nada de decorar el SEO. Primero claridad, luego ejecuci&oacute;n, y despu&eacute;s medici&oacute;n.</p>
-      <div class="py-work-grid">
-        <article class="py-work-card">
-          <img src="${mapImage}" alt="B&uacute;squeda de negocios locales en Google Maps">
-          <div class="py-work-body"><small>Mapa local</small><h3>D&oacute;nde est&aacute; el dinero</h3><p>Oficio, ciudad, b&uacute;squedas, competencia y servicios con m&aacute;s sentido comercial.</p></div>
-        </article>
-        <article class="py-work-card">
-          <img src="${methodImage2}" alt="Profesional local hablando con un cliente">
-          <div class="py-work-body"><small>Ficha y web</small><h3>Por qu&eacute; te elegir&iacute;an</h3><p>Categor&iacute;as, servicios, fotos reales, horarios, mensajes y una web que ayuda a llamar.</p></div>
-        </article>
-        <article class="py-work-card">
-          <img src="${methodImage3}" alt="Cliente revisando rese&ntilde;as en el tel&eacute;fono">
-          <div class="py-work-body"><small>Confianza</small><h3>Lo que reduce la duda</h3><p>Rese&ntilde;as recientes, respuestas cuidadas, pruebas de trabajos y contacto sin fricci&oacute;n.</p></div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-section py-example" id="facturacion-ciudad">
-    <div class="py-wrap">
-      <div class="py-k">Ejemplo en cristiano</div>
-      <h2 class="py-h2">Si fueras fontanero en Madrid, esto es lo que mirar&iacute;amos primero.</h2>
-      <p class="py-sub">No es una promesa de facturaci&oacute;n. Es una forma honesta de decidir si merece la pena invertir y por d&oacute;nde empezar.</p>
-      <div class="py-example-grid">
-        <div class="py-ticket">
-          <div class="py-ticket-head"><b>Fontaneros en Madrid</b><span>Lectura inicial antes de tocar nada</span></div>
-          <div class="py-ticket-row"><div><b>Servicio m&aacute;s buscado</b><small>Urgencias, fugas y desatascos</small></div><strong>42.000/mes</strong></div>
-          <div class="py-ticket-row"><div><b>Servicio con mejor ticket</b><small>Reformas, instalaciones y trabajos planificados</small></div><strong>3.500 &euro;</strong></div>
-          <div class="py-ticket-row"><div><b>Problema visible</b><small>Fotos pobres, rese&ntilde;as antiguas y llamada poco clara</small></div><strong>Arreglable</strong></div>
-          <div class="py-ticket-row"><div><b>Primer mes</b><small>Ficha, servicios, fotos, rese&ntilde;as y botones de contacto</small></div><strong>Prioridad 1</strong></div>
-        </div>
-        <div class="py-map-photo">
-          <img src="${mapImage}" alt="Persona buscando negocios locales en el m&oacute;vil">
-          <div class="py-map-note"><b>La decisi&oacute;n pasa en el m&oacute;vil.</b><span>El cliente compara tres cosas: qui&eacute;n sale, qui&eacute;n parece fiable y a qui&eacute;n puede llamar ahora.</span></div>
+        <div class="mk-quick">
+          <a href="sector-electricistas.html">Electricistas</a>
+          <a href="sector-reformas-integrales.html">Reformas</a>
+          <a href="sector-dentistas.html">Dentistas</a>
+          <a href="sectores.html">Ver todos</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="py-section py-method" id="metodo">
-    <div class="py-wrap">
-      <div class="py-method-head">
+  <section class="mk-stats">
+    <div class="mk-wrap">
+      <div class="mk-stats-grid">
+        <div class="mk-stats-intro">Primero miramos el mercado. Luego decidimos si merece la pena pelearlo.</div>
+        <div class="mk-stat"><b>42K</b><span>b&uacute;squedas/mes en Madrid</span></div>
+        <div class="mk-stat"><b>3,1M &euro;</b><span>mercado local estimado</span></div>
+        <div class="mk-stat"><b>90 d&iacute;as</b><span>primer ciclo de trabajo</span></div>
+      </div>
+      <div class="mk-proof">
+        <div>Negocios locales que quieren decidir con n&uacute;meros, no con intuici&oacute;n</div>
+        <div class="mk-proof-row"><span>Cl&iacute;nicas</span><span>Reformas</span><span>Restaurantes</span><span>Servicios urgentes</span><span>Academias</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mk-section" id="oportunidades">
+    <div class="mk-wrap">
+      <div class="mk-head">
         <div>
-          <div class="py-k">M&eacute;todo de trabajo</div>
-          <h2 class="py-h2">Cuatro semanas para poner orden y saber qu&eacute; est&aacute; pasando.</h2>
-          <p class="py-sub">Despu&eacute;s se repite cada mes con datos, no con ocurrencias.</p>
+          <div class="mk-k">Explora oportunidades</div>
+          <h2 class="mk-h2">Sectores donde Google ya reparte llamadas.</h2>
+          <p class="mk-sub">Cada tarjeta es una forma de entrar al mercado: sector, ciudad, demanda, margen y primeros trabajos visibles.</p>
         </div>
-        <a class="py-btn alt" href="metodo.html">Ver m&eacute;todo completo</a>
+        <a class="mk-link" href="sectores.html">Ver todos los sectores</a>
       </div>
-      <div class="py-timeline">
-        <article class="py-week"><span class="py-week-n">1</span><h3>Medimos ciudad y competencia</h3><p>Buscamos demanda real, servicios rentables y rivales que hoy se llevan las llamadas.</p></article>
-        <article class="py-week"><span class="py-week-n">2</span><h3>Ordenamos ficha y servicios</h3><p>Google entiende qu&eacute; haces, d&oacute;nde trabajas y qu&eacute; debe mostrar cuando te buscan.</p></article>
-        <article class="py-week"><span class="py-week-n">3</span><h3>A&ntilde;adimos prueba real</h3><p>Fotos, rese&ntilde;as, respuestas, web m&oacute;vil y se&ntilde;ales que hacen confiar.</p></article>
-        <article class="py-week"><span class="py-week-n">4</span><h3>Medimos llamadas y decidimos</h3><p>Vemos qu&eacute; entr&oacute;, qu&eacute; servicio funcion&oacute; y qu&eacute; toca atacar despu&eacute;s.</p></article>
+      <div class="mk-card-grid">
+        <a class="mk-card" href="sector.html">
+          <img src="${mapImage}" alt="B&uacute;squeda de negocios locales en Google Maps">
+          <span class="mk-badge">Alta demanda</span>
+          <div class="mk-card-body"><h3>Fontaneros en Madrid</h3><p>Urgencias, fugas y reformas con intenci&oacute;n alta.</p><div class="mk-card-meta"><span>3,1M &euro;/mes</span><span>Ver</span></div></div>
+        </a>
+        <a class="mk-card" href="sector-reformas-integrales.html">
+          <img src="${methodImage2}" alt="Profesional local hablando con un cliente">
+          <span class="mk-badge">Ticket alto</span>
+          <div class="mk-card-body"><h3>Reformas integrales</h3><p>Menos volumen, mucho m&aacute;s margen por operaci&oacute;n.</p><div class="mk-card-meta"><span>Desde 3.500 &euro;</span><span>Ver</span></div></div>
+        </a>
+        <a class="mk-card" href="sector-dentistas.html">
+          <img src="${methodImage3}" alt="Cliente revisando rese&ntilde;as en el tel&eacute;fono">
+          <span class="mk-badge">Confianza</span>
+          <div class="mk-card-body"><h3>Dentistas y cl&iacute;nicas</h3><p>Rese&ntilde;as, proximidad y llamada clara deciden mucho.</p><div class="mk-card-meta"><span>Local + reputaci&oacute;n</span><span>Ver</span></div></div>
+        </a>
+        <a class="mk-card" href="sector-restaurantes.html">
+          <img src="${methodImage4}" alt="Profesional atendiendo llamadas de clientes">
+          <span class="mk-badge">Repetici&oacute;n</span>
+          <div class="mk-card-body"><h3>Restaurantes</h3><p>Reservas, rutas, fotos, horarios y prueba social.</p><div class="mk-card-meta"><span>Mapa + decisi&oacute;n</span><span>Ver</span></div></div>
+        </a>
       </div>
     </div>
   </section>
 
-  <section class="py-section py-proof">
-    <div class="py-wrap py-proof-grid">
-      <article class="py-proof-card">
-        <h3>Lo que s&iacute; hacemos</h3>
-        <ul class="py-proof-list">
-          <li>Trabajar con datos por ciudad y por servicio.</li>
-          <li>Priorizar llamadas y trabajos con margen.</li>
-          <li>Mejorar ficha, web, fotos, rese&ntilde;as y contacto.</li>
-          <li>Explicar cada mes qu&eacute; se hizo y qu&eacute; toca ahora.</li>
-        </ul>
-      </article>
-      <article class="py-proof-card dark">
-        <h3>Lo que no vendemos</h3>
-        <ul class="py-proof-list">
-          <li>Prometer el primer puesto en dos semanas.</li>
-          <li>Informes bonitos que no hablan de llamadas.</li>
-          <li>Textos para rellenar p&aacute;ginas sin criterio comercial.</li>
-          <li>Tratar igual un trabajo barato que uno rentable.</li>
-        </ul>
-      </article>
+  <section class="mk-section mk-feature">
+    <div class="mk-wrap mk-feature-grid">
+      <div class="mk-feature-photo">
+        <img src="${mapImage}" alt="Persona buscando servicios locales en Google Maps">
+        <div class="mk-float"><small>Ejemplo de lectura</small><b>3,1M &euro;</b><span>mercado mensual estimado</span></div>
+      </div>
+      <div class="mk-feature-copy">
+        <div class="mk-k">Facturaci&oacute;n por ciudad</div>
+        <h2>La pantalla que hace que el SEO deje de sonar abstracto.</h2>
+        <p>Antes de tocar una ficha, ponemos delante la oportunidad: cu&aacute;ntas personas buscan, cu&aacute;nto vale cada servicio y qu&eacute; parte tiene sentido pelear en Google Maps.</p>
+        <div class="mk-actions">
+          <a class="mk-btn" href="fontaneros-madrid.html">Ver ejemplo de Madrid</a>
+          <a class="mk-btn alt" href="nuestros-resultados.html">Ver resultados</a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="py-final" style="background-image:url(${methodImage4})">
-    <div class="py-wrap">
-      <h2>Empecemos por tu ciudad. Luego hablamos de SEO.</h2>
-      <p>Si vemos demanda, ticket y margen, te ense&ntilde;amos d&oacute;nde est&aacute; la oportunidad y qu&eacute; har&iacute;amos durante los primeros 90 d&iacute;as. Si no lo vemos claro, tambi&eacute;n te lo decimos.</p>
-      <div class="py-actions">
-        <a class="py-btn" href="#calculadora">Ver mi ciudad</a>
-        <a class="py-btn alt" href="metodo.html">Ver c&oacute;mo trabajamos</a>
+  <section class="mk-section">
+    <div class="mk-wrap">
+      <div class="mk-head">
+        <div>
+          <div class="mk-k">Ciudades populares</div>
+          <h2 class="mk-h2">El mismo sector cambia mucho por ciudad.</h2>
+          <p class="mk-sub">La oportunidad no se decide en gen&eacute;rico. Se decide cruzando ciudad, servicio, competencia y margen.</p>
+        </div>
+        <a class="mk-link" href="sectores.html">Explorar sectores</a>
+      </div>
+      <div class="mk-city-grid">
+        <a class="mk-city" href="fontaneros-madrid.html" style="background-image:url(${heroImage})"><span><b>Madrid</b><span>Alta demanda</span></span></a>
+        <a class="mk-city" href="sector.html" style="background-image:url(${mapImage})"><span><b>Barcelona</b><span>Mercado grande</span></span></a>
+        <a class="mk-city" href="sector.html" style="background-image:url(${methodImage2})"><span><b>Valencia</b><span>Buena pelea</span></span></a>
+        <a class="mk-city" href="sector.html" style="background-image:url(${methodImage3})"><span><b>Sevilla</b><span>Intenci&oacute;n clara</span></span></a>
+        <a class="mk-city" href="sector.html" style="background-image:url(${methodImage4})"><span><b>M&aacute;laga</b><span>Servicios locales</span></span></a>
+        <a class="mk-city" href="sectores.html" style="background-image:url(${heroImage})"><span><b>Tu ciudad</b><span>Calcular ahora</span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="mk-section" id="metodo">
+    <div class="mk-wrap">
+      <div class="mk-head">
+        <div>
+          <div class="mk-k">M&eacute;todo Visto</div>
+          <h2 class="mk-h2">Cuatro acciones, muchas tareas concretas.</h2>
+          <p class="mk-sub">Cada bloque es clicable porque el cliente debe poder ver qu&eacute; se trabaja de verdad.</p>
+        </div>
+        <a class="mk-link" href="metodo.html">Ver m&eacute;todo completo</a>
+      </div>
+      <div class="mk-method-grid">
+        <a class="mk-method-card" href="metodo-fase1.html"><small>1</small><h3>Identidad</h3><p>Google entiende qui&eacute;n eres, qu&eacute; haces y d&oacute;nde trabajas.</p></a>
+        <a class="mk-method-card" href="metodo-fase2.html"><small>2</small><h3>Atractivo</h3><p>Fotos, servicios, precios orientativos y web que ayudan a elegirte.</p></a>
+        <a class="mk-method-card" href="metodo-fase3.html"><small>3</small><h3>Confianza</h3><p>Rese&ntilde;as, respuestas y prueba real para reducir dudas.</p></a>
+        <a class="mk-method-card" href="metodo-fase4.html"><small>4</small><h3>Conversi&oacute;n</h3><p>Llamadas, WhatsApp, rutas, formularios y medici&oacute;n.</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="mk-section mk-dark">
+    <div class="mk-wrap mk-dark-grid">
+      <div>
+        <div class="mk-k">Ejemplo de mercado</div>
+        <h2>Fontaneros en Madrid, explicado como lo mirar&iacute;a un due&ntilde;o.</h2>
+        <p>No prometemos capturar todo el mercado. Ense&ntilde;amos el tama&ntilde;o de la oportunidad y las tareas que m&aacute;s acercan llamadas.</p>
+        <a class="mk-btn" href="fontaneros-madrid.html">Abrir ejemplo completo</a>
+      </div>
+      <div class="mk-dark-panel">
+        <div class="mk-row"><div><b>Servicio m&aacute;s buscado</b><span>Urgencias, fugas y desatascos</span></div><strong>42K/mes</strong></div>
+        <div class="mk-row"><div><b>Servicio con margen</b><span>Reformas e instalaciones</span></div><strong>3.500 &euro;</strong></div>
+        <div class="mk-row"><div><b>Primer trabajo</b><span>Ficha, fotos, rese&ntilde;as y llamada</span></div><strong>Semana 1</strong></div>
+        <div class="mk-row"><div><b>M&eacute;trica clave</b><span>Llamadas desde Google y web</span></div><strong>Contacto</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mk-section mk-final">
+    <div class="mk-wrap">
+      <div class="mk-final-box">
+        <div>
+          <h2>Prueba con tu sector y tu ciudad.</h2>
+          <p>Si el mercado no tiene suficiente demanda o margen, te lo decimos. Si lo tiene, sabr&aacute;s por d&oacute;nde empezar.</p>
+        </div>
+        <a class="mk-btn" href="#calculadora">Calcular mi mercado</a>
       </div>
     </div>
   </section>
